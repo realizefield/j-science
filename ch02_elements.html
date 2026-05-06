@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>元素記号を覚えよう | 第2講 物質の表し方 | GAMBA中学理科</title>
+<link rel="stylesheet" href="app.css">
+<style>
+/* 元素記号トレーナー専用スタイル */
+.elem-tbl-train {
+  width:100%;
+  border-collapse:collapse;
+  margin:14px 0;
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+.elem-tbl-train th {
+  background:linear-gradient(135deg, #4FC3F7 0%, #29B6F6 100%);
+  color:#fff;
+  padding:10px;
+  font-size:14px;
+}
+.elem-tbl-train td {
+  border-bottom:1px solid #FFE0B2;
+  padding:12px 8px;
+  text-align:center;
+  font-size:16px;
+}
+.elem-tbl-train tr:last-child td { border-bottom:none; }
+.elem-tbl-train .symbol-cell {
+  background:#FFF8E7;
+  font-weight:bold;
+  color:#2C3E50;
+  font-size:22px;
+  width:30%;
+}
+.elem-tbl-train .name-cell {
+  background:#FFF;
+  font-size:16px;
+  width:40%;
+}
+.elem-tbl-train .num-cell {
+  width:10%;
+  color:#FF8C42;
+  font-weight:bold;
+}
+/* 語群埋め用空欄スタイル(表セル内) */
+.elem-tbl-train .kw-blank {
+  display:inline-block;
+  min-width:90px;
+  padding:4px 10px;
+  background:#FFE082;
+  border:2px dashed #FFB300;
+  border-radius:6px;
+  color:#C0392B;
+  font-weight:bold;
+}
+.elem-tbl-train .blank-slot {
+  display:inline-block;
+  min-width:90px;
+  min-height:28px;
+  padding:4px 10px;
+  background:#fff;
+  border:2px dashed #FF8C42;
+  border-radius:6px;
+  cursor:pointer;
+  vertical-align:middle;
+}
+.elem-tbl-train .blank-slot:empty::before {
+  content:"タップ";
+  color:#ccc;
+  font-size:13px;
+}
+.group-intro {
+  background:#FFF8E7;
+  border-left:4px solid #FF8C42;
+  padding:10px 14px;
+  margin:14px 0 10px;
+  border-radius:6px;
+  font-size:14px;
+  color:#555;
+}
+.group-intro strong { color:#E67838; }
+</style>
+</head>
+<body data-page="ch02_elements">
+
+<nav class="topnav">
+  <span class="brand">🧪 GAMBA 中学理科 化学変化</span>
+  <span class="sep">|</span>
+  <a href="index.html">目次</a>
+  <a href="ch02.html">第2講へ戻る</a>
+</nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="crumb">第2講 / 元素記号トレーナー</div>
+  <h1>元素記号を覚えよう <span class="stars">★★☆</span></h1>
+  <p class="sub">主要な元素記号を、3つのグループに分けて覚えていきましょう。各グループで <strong>「記号 → 元素名」</strong> と <strong>「元素名 → 記号」</strong> の両方向のトレーニングをします。何度も挑戦してベストタイムを縮めよう!</p>
+</header>
+
+<main>
+
+<!-- ================================================== -->
+<!--  グループ1:H, O, C, N, S(非金属の基本)           -->
+<!-- ================================================== -->
+<div class="unit">
+  <div class="unit-title"><span class="num">G1</span>グループ1:基本の非金属(H・O・C・N・S)</div>
+
+  <div class="group-intro">
+    <strong>H, O, C, N, S</strong> ― 化学でいちばんよく出てくる元素たち。空気や水、生き物の体をつくる主役です。まずはこの5つから覚えよう!
+  </div>
+
+  <!-- ▼ G1-A:記号 → 元素名 -->
+  <div class="stage challenge" data-ch-id="g1a" data-target="#g1a-readbox">
+    <div class="stage-head">
+      <span class="stage-label read">📖 記号 → 元素名</span>
+      <div class="stage-actions">
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="g1a-readbox">
+      <p>表の記号を見て、合う <strong>元素名</strong> を語群から選んで入れましょう。記号の下にあるカタカナは、その記号の読み方のヒントです。</p>
+
+      <table class="elem-tbl-train">
+        <thead>
+          <tr><th>No.</th><th>記号</th><th>元素名</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num-cell">①</td>
+            <td class="symbol-cell">H</td>
+            <td class="name-cell"><span class="kw-blank" data-a="水素">水素</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">②</td>
+            <td class="symbol-cell">O</td>
+            <td class="name-cell"><span class="kw-blank" data-a="酸素">酸素</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">③</td>
+            <td class="symbol-cell">C</td>
+            <td class="name-cell"><span class="kw-blank" data-a="炭素">炭素</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">④</td>
+            <td class="symbol-cell">N</td>
+            <td class="name-cell"><span class="kw-blank" data-a="窒素">窒素</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">⑤</td>
+            <td class="symbol-cell">S</td>
+            <td class="name-cell"><span class="kw-blank" data-a="硫黄">硫黄</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <div class="ranking">
+    <h3>🏆 ベストタイム(記号→元素名)</h3>
+    <ul id="ranking-g1a" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('g1a')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+
+
+  <!-- ▼ G1-B:元素名 → 記号 -->
+  <div class="stage challenge" data-ch-id="g1b" data-target="#g1b-readbox" style="margin-top:18px;">
+    <div class="stage-head">
+      <span class="stage-label read">📖 元素名 → 記号</span>
+      <div class="stage-actions">
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="g1b-readbox">
+      <p>今度は逆方向。<strong>元素名</strong> を見て、合う <strong>記号</strong> を語群から選んで入れましょう。</p>
+
+      <table class="elem-tbl-train">
+        <thead>
+          <tr><th>No.</th><th>元素名</th><th>記号</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num-cell">①</td>
+            <td class="name-cell">水素</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="H">H</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">②</td>
+            <td class="name-cell">酸素</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="O">O</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">③</td>
+            <td class="name-cell">炭素</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="C">C</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">④</td>
+            <td class="name-cell">窒素</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="N">N</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">⑤</td>
+            <td class="name-cell">硫黄</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="S">S</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <div class="ranking">
+    <h3>🏆 ベストタイム(元素名→記号)</h3>
+    <ul id="ranking-g1b" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('g1b')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+</div>
+
+
+<!-- ================================================== -->
+<!--  グループ2:Na, Ca, Mg, Al, Cl                     -->
+<!-- ================================================== -->
+<div class="unit">
+  <div class="unit-title"><span class="num">G2</span>グループ2:身近な元素(Na・Ca・Mg・Al・Cl)</div>
+
+  <div class="group-intro">
+    <strong>Na, Ca, Mg, Al, Cl</strong> ― 食塩(NaCl)や骨(Ca)、アルミホイル(Al)など、身近なところにいる元素たちです。記号は2文字なので、<strong>1文字目は大文字、2文字目は小文字</strong> をしっかり守ろう!
+  </div>
+
+  <!-- ▼ G2-A:記号 → 元素名 -->
+  <div class="stage challenge" data-ch-id="g2a" data-target="#g2a-readbox">
+    <div class="stage-head">
+      <span class="stage-label read">📖 記号 → 元素名</span>
+      <div class="stage-actions">
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="g2a-readbox">
+      <p>表の記号を見て、合う <strong>元素名</strong> を語群から選んで入れましょう。</p>
+
+      <table class="elem-tbl-train">
+        <thead>
+          <tr><th>No.</th><th>記号</th><th>元素名</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num-cell">①</td>
+            <td class="symbol-cell">Na</td>
+            <td class="name-cell"><span class="kw-blank" data-a="ナトリウム">ナトリウム</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">②</td>
+            <td class="symbol-cell">Ca</td>
+            <td class="name-cell"><span class="kw-blank" data-a="カルシウム">カルシウム</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">③</td>
+            <td class="symbol-cell">Mg</td>
+            <td class="name-cell"><span class="kw-blank" data-a="マグネシウム">マグネシウム</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">④</td>
+            <td class="symbol-cell">Al</td>
+            <td class="name-cell"><span class="kw-blank" data-a="アルミニウム">アルミニウム</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">⑤</td>
+            <td class="symbol-cell">Cl</td>
+            <td class="name-cell"><span class="kw-blank" data-a="塩素">塩素</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <div class="ranking">
+    <h3>🏆 ベストタイム(記号→元素名)</h3>
+    <ul id="ranking-g2a" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('g2a')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+
+
+  <!-- ▼ G2-B:元素名 → 記号 -->
+  <div class="stage challenge" data-ch-id="g2b" data-target="#g2b-readbox" style="margin-top:18px;">
+    <div class="stage-head">
+      <span class="stage-label read">📖 元素名 → 記号</span>
+      <div class="stage-actions">
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="g2b-readbox">
+      <p>今度は逆方向。<strong>元素名</strong> を見て、合う <strong>記号</strong> を語群から選んで入れましょう。</p>
+
+      <table class="elem-tbl-train">
+        <thead>
+          <tr><th>No.</th><th>元素名</th><th>記号</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num-cell">①</td>
+            <td class="name-cell">ナトリウム</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="Na">Na</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">②</td>
+            <td class="name-cell">カルシウム</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="Ca">Ca</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">③</td>
+            <td class="name-cell">マグネシウム</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="Mg">Mg</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">④</td>
+            <td class="name-cell">アルミニウム</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="Al">Al</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">⑤</td>
+            <td class="name-cell">塩素</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="Cl">Cl</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <div class="ranking">
+    <h3>🏆 ベストタイム(元素名→記号)</h3>
+    <ul id="ranking-g2b" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('g2b')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+</div>
+
+
+<!-- ================================================== -->
+<!--  グループ3:Au, Ag, Cu, Hg, Fe, Zn(主要な金属)    -->
+<!-- ================================================== -->
+<div class="unit">
+  <div class="unit-title"><span class="num">G3</span>グループ3:主要な金属(Au・Ag・Cu・Hg・Fe・Zn)</div>
+
+  <div class="group-intro">
+    <strong>Au, Ag, Cu, Hg, Fe, Zn</strong> ― 金・銀・銅、そして鉄・水銀・亜鉛。記号は元素名(日本語)とは似ていないので、しっかり覚えるのがコツです。最後のグループ、ファイト!
+  </div>
+
+  <!-- ▼ G3-A:記号 → 元素名 -->
+  <div class="stage challenge" data-ch-id="g3a" data-target="#g3a-readbox">
+    <div class="stage-head">
+      <span class="stage-label read">📖 記号 → 元素名</span>
+      <div class="stage-actions">
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="g3a-readbox">
+      <p>表の記号を見て、合う <strong>元素名</strong> を語群から選んで入れましょう。</p>
+
+      <table class="elem-tbl-train">
+        <thead>
+          <tr><th>No.</th><th>記号</th><th>元素名</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num-cell">①</td>
+            <td class="symbol-cell">Au</td>
+            <td class="name-cell"><span class="kw-blank" data-a="金">金</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">②</td>
+            <td class="symbol-cell">Ag</td>
+            <td class="name-cell"><span class="kw-blank" data-a="銀">銀</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">③</td>
+            <td class="symbol-cell">Cu</td>
+            <td class="name-cell"><span class="kw-blank" data-a="銅">銅</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">④</td>
+            <td class="symbol-cell">Hg</td>
+            <td class="name-cell"><span class="kw-blank" data-a="水銀">水銀</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">⑤</td>
+            <td class="symbol-cell">Fe</td>
+            <td class="name-cell"><span class="kw-blank" data-a="鉄">鉄</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">⑥</td>
+            <td class="symbol-cell">Zn</td>
+            <td class="name-cell"><span class="kw-blank" data-a="亜鉛">亜鉛</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <div class="ranking">
+    <h3>🏆 ベストタイム(記号→元素名)</h3>
+    <ul id="ranking-g3a" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('g3a')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+
+
+  <!-- ▼ G3-B:元素名 → 記号 -->
+  <div class="stage challenge" data-ch-id="g3b" data-target="#g3b-readbox" style="margin-top:18px;">
+    <div class="stage-head">
+      <span class="stage-label read">📖 元素名 → 記号</span>
+      <div class="stage-actions">
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="g3b-readbox">
+      <p>今度は逆方向。<strong>元素名</strong> を見て、合う <strong>記号</strong> を語群から選んで入れましょう。</p>
+
+      <table class="elem-tbl-train">
+        <thead>
+          <tr><th>No.</th><th>元素名</th><th>記号</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num-cell">①</td>
+            <td class="name-cell">金</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="Au">Au</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">②</td>
+            <td class="name-cell">銀</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="Ag">Ag</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">③</td>
+            <td class="name-cell">銅</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="Cu">Cu</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">④</td>
+            <td class="name-cell">水銀</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="Hg">Hg</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">⑤</td>
+            <td class="name-cell">鉄</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="Fe">Fe</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">⑥</td>
+            <td class="name-cell">亜鉛</td>
+            <td class="symbol-cell"><span class="kw-blank" data-a="Zn">Zn</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <div class="ranking">
+    <h3>🏆 ベストタイム(元素名→記号)</h3>
+    <ul id="ranking-g3b" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('g3b')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+</div>
+
+
+<!-- ================================================== -->
+<!--  おつかれさま                                       -->
+<!-- ================================================== -->
+<div class="next-actions">
+  <h3>🎉 全グループ、おつかれさま!</h3>
+  <p>16種類の元素記号、しっかり覚えられたかな?何度も繰り返して、完全に覚えてしまおう!</p>
+  <div class="links">
+    <a href="ch02.html">📖 第2講に戻る</a>
+    <a href="ch02_practice.html">📝 練習問題へ</a>
+  </div>
+</div>
+
+<nav class="pagenav">
+  <a href="ch02.html">
+    <span class="label">◀ PREV</span>
+    <span class="title">第2講 物質の表し方</span>
+  </a>
+  <a href="index.html" class="next">
+    <span class="label">目次 ▶</span>
+    <span class="title">講座一覧</span>
+  </a>
+</nav>
+
+</main>
+</div>
+
+<!-- 共通モーダル類 -->
+<div class="example-modal" id="example-modal">
+  <div class="example-content" id="example-content"></div>
+</div>
+
+<div class="pass-overlay" id="pass-overlay">
+  <div class="pass-dialog">
+    <div class="pass-emoji">🎉</div>
+    <h2>合 格!</h2>
+    <p>すべて正解!よくできました!</p>
+    <div class="pass-time" id="pass-time-display">0:00.0</div>
+    <p style="font-size:13px;color:#666;margin-top:6px;">ランキングに記録されました</p>
+    <div class="pass-actions">
+      <button class="btn outline" onclick="document.getElementById('pass-overlay').classList.remove('show')">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<div class="fail-toast" id="fail-toast"></div>
+<div class="confetti" id="confetti"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

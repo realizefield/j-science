@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第4講 酸化・燃焼 | GAMBA中学理科</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  /* 第4講ローカル: 横長の図のための縦積みレイアウト */
+  .fig-wide {
+    margin: 14px 0;
+  }
+  .fig-wide .fig-main {
+    text-align: center;
+  }
+  .fig-wide .fig-main img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+  }
+  .fig-wide .caption {
+    font-size: 13px;
+    color: #777;
+    margin-top: 4px;
+  }
+  /* 図の下に置く ラベル説明表 */
+  .fig-labels {
+    background: #FFFDF5;
+    border: 2px solid #FFB74D;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-top: 10px;
+  }
+  .fig-labels .fig-side-title {
+    font-weight: bold;
+    color: #E67838;
+    font-size: 14px;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #FFB74D;
+  }
+  .fig-labels dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 14px;
+    align-items: start;
+  }
+  .fig-labels dt {
+    font-weight: bold;
+    background: #FF8C42;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 14px;
+    text-align: center;
+    font-size: 14px;
+    min-width: 30px;
+    height: fit-content;
+  }
+  .fig-labels dd {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .fig-labels dd .term {
+    font-weight: bold;
+    color: #C0392B;
+  }
+</style>
+</head>
+<body data-page="ch04">
+
+<nav class="topnav">
+  <span class="brand">🧪 GAMBA 中学理科 化学変化</span>
+  <span class="sep">|</span>
+  <a href="index.html">📊 単元表</a>
+</nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="crumb">第4講 / 化学変化のひろがり</div>
+  <h1>酸化・燃焼 <span class="stars">★★☆</span></h1>
+  <p class="sub">物質が酸素と結びつく変化「酸化」、特にはげしく光や熱を出して進む「燃焼」を学びましょう。スチールウールや木炭、エタノールが燃えると何ができるのか、図を見ながら考えていきます。</p>
+</header>
+
+<main>
+
+<!-- ================================================== -->
+<!--  単元1: 酸化と燃焼 (基本)                          -->
+<!-- ================================================== -->
+<div class="unit">
+  <div class="unit-title"><span class="num">1</span>酸化と燃焼って何?</div>
+
+  <!-- ▼ 説明を読む(チャレンジ機能を統合) -->
+  <div class="stage challenge" data-ch-id="u1" data-target="#u1-readbox">
+    <div class="stage-head">
+      <span class="stage-label read">📖 説明</span>
+      <div class="stage-actions">
+        <button class="audio-btn" onclick="playAudio('ch04_u1_intro')">
+          <span class="ico">▶</span> 音声で聞く
+        </button>
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="u1-readbox">
+      <p>第3講で「2種類の物質が結びついて1つの物質ができる変化」を <span class="kw">化合</span> と学びました。化合の中でも、物質が <span class="kw-blank" data-a="酸素">酸素</span> と結びつく化学変化を、特に「<span class="kw-blank" data-a="酸化">酸化</span>」といいます。</p>
+
+      <p>酸化によってできた物質を「<span class="kw-blank" data-a="酸化物">酸化物</span>」といいます。たとえば鉄(Fe)が酸素(O₂)と結びつくと、酸化鉄ができます。これも酸化物の1つです。</p>
+
+      <p>酸化の中でも、特に <span class="kw">熱</span> や <span class="kw">光</span> を出しながら、はげしく進む酸化を「<span class="kw-blank" data-a="燃焼">燃焼</span>」といいます。木が燃える、ガスコンロでお湯をわかす、線香花火がパチパチと火花を散らす ―― これらはすべて燃焼です。</p>
+    </div>
+
+    <div class="point-box">
+      <span class="label">★ 覚えよう!</span>
+      <ul>
+        <li><strong>酸化</strong> …… 物質が <strong>酸素</strong> と結びつく化学変化</li>
+        <li><strong>酸化物</strong> …… 酸化によってできた物質</li>
+        <li><strong>燃焼</strong> …… 熱や光を出しながら、はげしく進む酸化</li>
+      </ul>
+    </div>
+
+    <!-- 語群(チャレンジ開始時のみ表示) -->
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、説明文の空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <!-- 線香花火の写真(燃焼の例) -->
+  <div class="fig-with-table">
+    <div class="fig-main">
+      <img src="data:image/png;base64,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" alt="線香花火">
+      <div class="caption">▲ 線香花火 ― はげしい光と熱を出す燃焼の例</div>
+    </div>
+    <div class="fig-side">
+      <div class="fig-side-title">📋 線香花火について</div>
+      <p>線香花火の火花は、火薬の中の <strong>鉄粉</strong> が酸素と結びついて燃焼している姿です。</p>
+      <p>はげしい <strong>光</strong> と <strong>熱</strong> を出すのが燃焼の特徴。これも酸化の1つです。</p>
+    </div>
+  </div>
+
+  <!-- ▼ ミニテスト -->
+  <div class="minitest-block">
+    <div class="mt-block-title">✏️ 確認問題</div>
+
+    <div class="minitest" data-correct="o">
+      <div class="mt-stem"><span class="mt-num">問1</span>物質が酸素と結びつく化学変化のことを「酸化」という。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">○ 正解です。酸化によってできた物質を <span class="kw">酸化物</span> といいます。</div>
+    </div>
+
+    <div class="minitest" data-correct="x">
+      <div class="mt-stem"><span class="mt-num">問2</span>酸化と燃焼は同じ意味で、ちがいはない。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">× 燃焼は酸化の <span class="kw">一種</span> ですが、特に <strong>熱や光を出しながらはげしく進む</strong> 酸化のこと。すべての酸化が燃焼ではありません(さびはおだやかな酸化です)。</div>
+    </div>
+
+    <div class="minitest" data-correct="o">
+      <div class="mt-stem"><span class="mt-num">問3</span>燃焼するときには、必ず酸素が必要である。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">○ 正解です。燃焼は酸化の一種なので、必ず <span class="kw">酸素</span> が必要です。だから、ふたをしたびんの中ではやがて火が消えます。</div>
+    </div>
+
+    <div class="minitest" data-correct="x">
+      <div class="mt-stem"><span class="mt-num">問4</span>「酸化物」とは、酸素そのもののことである。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">× 酸化物は、酸化によって <strong>新しくできた物質</strong> のこと。たとえば、鉄が酸化してできる「酸化鉄」、銅が酸化してできる「酸化銅」が酸化物です。酸素そのもののことではありません。</div>
+    </div>
+
+    <div class="mt-block-result"></div>
+    <div style="text-align:center;">
+      <button class="mt-block-reset">↻ もう一度</button>
+    </div>
+  </div>
+
+  <!-- ランキング -->
+  <div class="ranking">
+    <h3>🏆 ベストタイム</h3>
+    <ul id="ranking-u1" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('u1')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+</div>
+
+
+<!-- ================================================== -->
+<!--  単元2: スチールウールの燃焼                       -->
+<!-- ================================================== -->
+<div class="unit">
+  <div class="unit-title"><span class="num">2</span>スチールウール(鉄)を燃やしてみよう</div>
+
+  <!-- ▼ 説明を読む(チャレンジ機能を統合) -->
+  <div class="stage challenge" data-ch-id="u2" data-target="#u2-readbox">
+    <div class="stage-head">
+      <span class="stage-label read">📖 説明</span>
+      <div class="stage-actions">
+        <button class="audio-btn" onclick="playAudio('ch04_u2_intro')">
+          <span class="ico">▶</span> 音声で聞く
+        </button>
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="u2-readbox">
+      <p>スチールウールというのは、鉄(<span class="kw">Fe</span>)を細い糸のように加工したものです。掃除や金属磨きに使われます。これをガスバーナーで加熱すると、はげしく燃えて黒い物質に変わります。</p>
+
+      <div class="fig-with-table">
+        <div class="fig-main">
+          <img src="data:image/png;base64,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" alt="スチールウールをピンセットでつまんで加熱">
+          <div class="caption">▲ スチールウールをピンセットでつまみ、ガスバーナーで加熱する</div>
+        </div>
+        <div class="fig-side">
+          <div class="fig-side-title">📋 実験で起こること</div>
+          <dl>
+            <dt>反応前</dt>
+            <dd><span class="term">鉄(Fe)</span><br>銀色の細い糸状。電気を通す。</dd>
+            <dt>加熱中</dt>
+            <dd>はげしく光や熱を出す ⇒ <span class="term">燃焼</span></dd>
+            <dt>反応後</dt>
+            <dd><span class="term">酸化鉄</span><br>黒色でぼろぼろ。電気を通さない。</dd>
+          </dl>
+        </div>
+      </div>
+
+      <p>スチールウール(鉄)を加熱すると、空気中の <span class="kw-blank" data-a="酸素">酸素</span> と結びつき、<span class="kw-blank" data-a="酸化鉄">酸化鉄</span> という黒い物質ができます。これも <span class="kw">化合</span> の1つで、特にはげしく進むので <span class="kw-blank" data-a="燃焼">燃焼</span> といいます。</p>
+
+      <p>反応式は次のようになります(参考):</p>
+      <p style="text-align:center;font-size:18px;background:#fffbe7;padding:10px;border-radius:8px;">鉄 + 酸素 → 酸化鉄</p>
+
+      <p>ここで大切なポイントは、反応の前と後で <strong>性質がまったく変わる</strong> ことです。もとのスチールウール(鉄)は <span class="kw">電気を通し</span>、磁石につき、しなやかに曲がりました。しかし、反応後にできた <span class="kw">酸化鉄</span> は <span class="kw-blank" data-a="電気を通さない">電気を通さない</span>、もろくて指でつぶれる、と性質がまったく別のものになります。</p>
+
+      <p>また、結びついた酸素の分だけ <span class="kw-blank" data-a="質量">質量</span> が大きくなります。反応の前と後で重さが変わるのは、酸素が空気中から取りこまれたからです。</p>
+    </div>
+
+    <div class="point-box">
+      <span class="label">★ 覚えよう!</span>
+      <ul>
+        <li><strong>鉄 + 酸素 → 酸化鉄</strong>(黒色)</li>
+        <li>反応後は <strong>電気を通さない</strong>、もろくなる(性質が変わる)</li>
+        <li>結びついた酸素の分だけ <strong>質量が大きく</strong> なる</li>
+      </ul>
+    </div>
+
+    <!-- 語群(チャレンジ開始時のみ表示) -->
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、説明文の空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <!-- ▼ ミニテスト -->
+  <div class="minitest-block">
+    <div class="mt-block-title">✏️ 確認問題</div>
+
+    <div class="minitest" data-correct="o">
+      <div class="mt-stem"><span class="mt-num">問1</span>スチールウール(鉄)を加熱すると、空気中の酸素と結びついて酸化鉄ができる。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">○ 正解です。鉄 + 酸素 → 酸化鉄、という燃焼が起こります。</div>
+    </div>
+
+    <div class="minitest" data-correct="x">
+      <div class="mt-stem"><span class="mt-num">問2</span>反応後の酸化鉄は、もとの鉄と同じく電気を通す。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">× 酸化鉄は <strong>電気を通さない</strong> です。化学変化では性質が大きく変わるのが特徴。鉄(電気を通す)→酸化鉄(通さない) と覚えましょう。</div>
+    </div>
+
+    <div class="minitest" data-correct="o">
+      <div class="mt-stem"><span class="mt-num">問3</span>スチールウールを加熱した後、結びついた酸素の分だけ質量は大きくなる。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">○ 正解です。空気中の酸素が物質に取りこまれるので、その分質量が増えます。</div>
+    </div>
+
+    <div class="minitest" data-correct="x">
+      <div class="mt-stem"><span class="mt-num">問4</span>燃焼するときには、熱は出るが光は出ない。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">× 燃焼は、<strong>熱と光を出しながら</strong> はげしく進む酸化です。両方出るのが燃焼の特徴です。</div>
+    </div>
+
+    <div class="mt-block-result"></div>
+    <div style="text-align:center;">
+      <button class="mt-block-reset">↻ もう一度</button>
+    </div>
+  </div>
+
+  <!-- ランキング -->
+  <div class="ranking">
+    <h3>🏆 ベストタイム</h3>
+    <ul id="ranking-u2" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('u2')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+</div>
+
+
+<!-- ================================================== -->
+<!--  単元3: 集気びんで3つの物質を燃やす                -->
+<!-- ================================================== -->
+<div class="unit">
+  <div class="unit-title"><span class="num">3</span>3つの物質を燃やしてみよう ― 有機物と無機物</div>
+
+  <!-- ▼ 説明を読む(チャレンジ機能を統合) -->
+  <div class="stage challenge" data-ch-id="u3" data-target="#u3-readbox">
+    <div class="stage-head">
+      <span class="stage-label read">📖 説明</span>
+      <div class="stage-actions">
+        <button class="audio-btn" onclick="playAudio('ch04_u3_intro')">
+          <span class="ico">▶</span> 音声で聞く
+        </button>
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="u3-readbox">
+      <p>次に、3つの物質 ― <strong>A スチールウール(鉄)</strong>、<strong>B エタノール</strong>、<strong>C 木炭</strong> ― を集気びんの中で燃やして、何ができるかを比べてみましょう。びんの中には <span class="kw">石灰水</span> を少し入れておきます。</p>
+
+      <div class="fig-wide">
+        <div class="fig-main">
+          <img src="data:image/png;base64,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EmyWSuvz2UywR/zMFtoX2CPmDa3oGr24larJwLOZa3yWG4pi8hO91j77BR26i3sU12StIymNmdVZyWXSh+33XdBPjmsWOQLgGvYlyjWpvFtifnMIcIX19u4gf41sq8gyZjmljynG8gyHIMwsF3gLya+yN1ZRnIWeGkv0EU6xqFRZFURyMe09iux7SU1XqnjMNla4KxtsZdve2cVvGkFw9ybhpUCgBjISS5IG+4nzQbWlcbpug5pXG6boOaVxum6DmlKUClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUHXz3E78fQV2HtSlApSlApSlApSlApSlApSlApSlApqlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKCK874HxjnENhDyfHfmENhObiGJpGRO8oybYKRvwxrB4l0u4RxHNXGY41hFx11dWfwcxhnk7Wj7u72LHR39R5qcUHtQQTi/S7iPHcpYZLH2dy8uMtvhsalxdPLHZIV1IYkY6V5Nku/wCpiTs197fppwiAZOOPAwGzyc8dzdWLsz2jTI5cSCAn01YsdntA7tDe6mdKCNWvDsbFzi/5fLPeXV/d2S2AjuJA0MEAILJGuvAdlDNsnZ+1bLjeDxHG8RFh8FjrbHWEJcxW1vGEjQsxZtAe22Yn/GtnXNApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlB//9k=" alt="集気びんでA、B、Cを燃やして石灰水で確認">
+          <div class="caption">▲ 集気びんに3つの物質を入れて燃やし、石灰水の変化を見る</div>
+        </div>
+        <div class="fig-labels">
+          <div class="fig-side-title">📋 図のラベル</div>
+          <dl>
+            <dt>A</dt>
+            <dd><span class="term">スチールウール(鉄)</span><br>金属。電気を通す。</dd>
+            <dt>B</dt>
+            <dd><span class="term">エタノール</span><br>アルコールの一種(液体)。</dd>
+            <dt>C</dt>
+            <dd><span class="term">木炭</span><br>木を蒸し焼きにして作ったもの。</dd>
+            <dt>石灰水</dt>
+            <dd>びんの中に少し入れておく液体。<strong>二酸化炭素</strong> にふれると <strong>白くにごる</strong> ことで、二酸化炭素が出たかどうかを確かめることができる。</dd>
+          </dl>
+        </div>
+      </div>
+
+      <p>燃やしたあと、びんを軽くゆすって石灰水のようすを見てみると ―</p>
+      <p>● <strong>A 鉄</strong> を燃やした → 石灰水は <span class="kw-blank" data-a="変化しない">変化しない</span>(にごらない)</p>
+      <p>● <strong>B エタノール</strong> を燃やした → 石灰水が <span class="kw">白くにごる</span></p>
+      <p>● <strong>C 木炭</strong> を燃やした → 石灰水が <span class="kw">白くにごる</span></p>
+
+      <p>BとCで石灰水が白くにごったのは、燃やしたときに <span class="kw-blank" data-a="二酸化炭素">二酸化炭素</span> が発生したからです。二酸化炭素ができたということは、もとの物質に <span class="kw-blank" data-a="炭素">炭素</span> がふくまれていたということ。さらに、びんの内側がくもることがあり、それは <span class="kw-blank" data-a="水">水</span>(水滴)ができたから。水ができたということは、もとの物質に <span class="kw">水素</span> がふくまれていたとわかります。</p>
+
+      <p>このように <strong>炭素 や 水素 をふくむ物質</strong> を「<span class="kw-blank" data-a="有機物">有機物</span>」といいます。エタノール(B)、木炭(C)、ろうそく、紙、砂糖、プラスチックなどはすべて有機物のなかまです。</p>
+
+      <p>いっぽう、有機物以外の物質は「<span class="kw-blank" data-a="無機物">無機物</span>」とよばれます。鉄(A)、ガラス、食塩、水などが無機物にあたります。</p>
+    </div>
+
+    <div class="point-box">
+      <span class="label">★ 覚えよう!</span>
+      <ul>
+        <li>燃やして <strong>二酸化炭素</strong> が出る → もとの物質に <strong>炭素</strong> がふくまれている</li>
+        <li>燃やして <strong>水</strong> が出る → もとの物質に <strong>水素</strong> がふくまれている</li>
+        <li><strong>有機物</strong> …… 炭素を中心にふくむ物質(エタノール、木炭、紙など)</li>
+        <li><strong>無機物</strong> …… 有機物以外の物質(鉄、ガラスなど)</li>
+        <li>※ 二酸化炭素や一酸化炭素は炭素をふくみますが、有機物には入れません(例外)</li>
+      </ul>
+    </div>
+
+    <!-- 語群(チャレンジ開始時のみ表示) -->
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、説明文の空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <!-- 補助:石油の燃焼 -->
+  <div class="fig-with-table">
+    <div class="fig-main">
+      <img src="data:image/png;base64,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" alt="集気びんで石油を燃やす">
+      <div class="caption">▲ 集気びんで石油(灯油)を燃やす実験</div>
+    </div>
+    <div class="fig-side">
+      <div class="fig-side-title">📋 もう1つの例:石油の燃焼</div>
+      <p>石油(灯油)を燃やすと、エタノールや木炭と同じように、<strong>二酸化炭素</strong> と <strong>水</strong> が発生します。</p>
+      <p>石灰水が <strong>白くにごる</strong> + びんの内側がくもる → 石油は <span class="term">有機物</span> だとわかります。</p>
+      <p>石油は炭素と水素を多くふくむ有機物のなかまで、ガソリンや灯油、プラスチックなどは石油から作られています。</p>
+    </div>
+  </div>
+
+  <!-- ▼ ミニテスト -->
+  <div class="minitest-block">
+    <div class="mt-block-title">✏️ 確認問題</div>
+
+    <div class="minitest" data-correct="o">
+      <div class="mt-stem"><span class="mt-num">問1</span>木炭を燃やすと二酸化炭素が発生し、石灰水が白くにごる。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">○ 正解です。木炭は炭素をふくむ <span class="kw">有機物</span> なので、燃やすと二酸化炭素が出ます。</div>
+    </div>
+
+    <div class="minitest" data-correct="x">
+      <div class="mt-stem"><span class="mt-num">問2</span>鉄(スチールウール)を燃やすと、二酸化炭素が発生する。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">× 鉄には炭素がふくまれていないので、燃やしても二酸化炭素は出ません。鉄は <span class="kw">無機物</span> です。できるのは <strong>酸化鉄</strong> だけです。</div>
+    </div>
+
+    <div class="minitest" data-correct="o">
+      <div class="mt-stem"><span class="mt-num">問3</span>燃やしたときに水ができたのは、もとの物質に水素がふくまれていたからである。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">○ 正解です。水素 + 酸素 → 水、という反応が起こるからです。</div>
+    </div>
+
+    <div class="minitest" data-correct="x">
+      <div class="mt-stem"><span class="mt-num">問4</span>食塩や水は有機物のなかまである。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">× 食塩(NaCl)も水(H₂O)も <strong>無機物</strong> です。有機物は「炭素を中心にふくむ物質」のことなので、食塩や水は入りません。</div>
+    </div>
+
+    <div class="mt-block-result"></div>
+    <div style="text-align:center;">
+      <button class="mt-block-reset">↻ もう一度</button>
+    </div>
+  </div>
+
+  <!-- ランキング -->
+  <div class="ranking">
+    <h3>🏆 ベストタイム</h3>
+    <ul id="ranking-u3" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('u3')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+</div>
+
+
+<!-- ================================================== -->
+<!--  すべての単元を終えたら…                            -->
+<!-- ================================================== -->
+<div class="next-actions">
+  <h3>🎉 第4講、おつかれさま!</h3>
+  <p>酸化と燃焼、有機物と無機物について学びました。次の講では「質量保存の法則」と「定比例の法則」を学びましょう。</p>
+  <div class="links">
+    <a href="index.html">📊 単元表に戻る</a>
+  </div>
+</div>
+
+<nav class="pagenav">
+  <a href="index.html">
+    <span class="label">◀ 単元表</span>
+    <span class="title">全単元一覧へ</span>
+  </a>
+  <a href="index.html" class="next">
+    <span class="label">単元表 ▶</span>
+    <span class="title">全単元一覧</span>
+  </a>
+</nav>
+
+</main>
+</div>
+
+<!-- 共通モーダル類 -->
+<div class="example-modal" id="example-modal">
+  <div class="example-content" id="example-content"></div>
+</div>
+
+<div class="pass-overlay" id="pass-overlay">
+  <div class="pass-dialog">
+    <div class="pass-emoji">🎉</div>
+    <h2>合 格!</h2>
+    <p>すべて正解!よくできました!</p>
+    <div class="pass-time" id="pass-time-display">0:00.0</div>
+    <p style="font-size:13px;color:#666;margin-top:6px;">ランキングに記録されました</p>
+    <div class="pass-actions">
+      <button class="btn outline" onclick="document.getElementById('pass-overlay').classList.remove('show')">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<div class="fail-toast" id="fail-toast"></div>
+<div class="confetti" id="confetti"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
