@@ -5,8 +5,181 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>目次 | GAMBA中学理科 化学変化</title>
 <link rel="stylesheet" href="app.css">
+<style>
+/* ===== マトリクス目次 専用スタイル ===== */
+.matrix-wrap {
+  margin: 20px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.matrix-tbl {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: separate;
+  border-spacing: 4px;
+  background: transparent;
+}
+.matrix-tbl thead th {
+  background: linear-gradient(135deg, #4FC3F7 0%, #29B6F6 100%);
+  color: #fff;
+  padding: 10px 6px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.matrix-tbl thead th.col-chapter {
+  background: linear-gradient(135deg, #FF8C42 0%, #E67838 100%);
+  width: 22%;
+  min-width: 160px;
+}
+.matrix-tbl tbody td {
+  padding: 0;
+  vertical-align: middle;
+  text-align: center;
+}
+/* 講のラベル(左端) */
+.chap-label {
+  background: linear-gradient(135deg, #FFE0B2 0%, #FFCC80 100%);
+  border-radius: 8px;
+  padding: 12px 10px;
+  text-align: left;
+}
+.chap-label .chap-num {
+  color: #E67838;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+.chap-label .chap-title {
+  color: #2C3E50;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 2px 0 0;
+}
+.chap-label .chap-desc {
+  color: #666;
+  font-size: 11px;
+  margin: 4px 0 0;
+}
+/* 各セル(リンク付き) */
+.cell-link {
+  background: #FFF8E7;
+  border: 2px solid #FFD699;
+  border-radius: 8px;
+  padding: 10px 6px;
+  text-decoration: none;
+  color: #2C3E50;
+  transition: all 0.15s;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cell-link:hover {
+  background: #FFECB3;
+  border-color: #FF8C42;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(255,140,66,0.25);
+}
+.cell-link .ico {
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+.cell-link .label {
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1.3;
+  color: #2C3E50;
+}
+.cell-link .sublabel {
+  font-size: 10px;
+  color: #888;
+  margin-top: 2px;
+}
+/* 準備中セル */
+.cell-prep {
+  background: #F5F5F5;
+  border: 2px dashed #DDD;
+  border-radius: 8px;
+  padding: 10px 6px;
+  color: #BBB;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+}
+.cell-prep .ico {
+  font-size: 16px;
+  margin-bottom: 2px;
+  opacity: 0.5;
+}
+.cell-prep .label {
+  font-size: 10px;
+  font-weight: normal;
+}
+/* 空セル */
+.cell-empty {
+  background: transparent;
+  min-height: 70px;
+}
+/* セルの色違い:問題(青系)/サブツール(紫系) */
+.cell-link.q-cell {
+  background: #E3F2FD;
+  border-color: #90CAF9;
+}
+.cell-link.q-cell:hover {
+  background: #BBDEFB;
+  border-color: #1976D2;
+}
+.cell-link.tool-cell {
+  background: #F3E5F5;
+  border-color: #CE93D8;
+}
+.cell-link.tool-cell:hover {
+  background: #E1BEE7;
+  border-color: #8E24AA;
+}
+
+/* レジェンド */
+.legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 14px 0 18px;
+  font-size: 12px;
+  color: #666;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.legend-swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 2px solid;
+}
+
+.matrix-hint {
+  display: none;
+  color: #FF8C42;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+@media (max-width: 720px) {
+  .matrix-hint { display: block; }
+}
+</style>
 </head>
-<body>
+<body data-page="index">
 
 <nav class="topnav">
   <span class="brand">🧪 GAMBA 中学理科 化学変化</span>
@@ -15,57 +188,312 @@
 <div class="wrap">
 
 <header class="hero">
-  <div class="crumb">中学2年生 / 化学変化</div>
-  <h1>GAMBAシステム 化学変化</h1>
-  <p class="sub">明るく、楽しく、しっかり学べる中学理科の化学変化単元です。各講ごとに、説明 → チャレンジ → ミニテスト の流れで進めていきましょう。最後に練習問題・確認問題・テストで力試しできます。</p>
+  <h1>化学変化 ― 目次 <span class="stars">★★☆</span></h1>
+  <p class="sub">中学理科「化学変化」の単元を、講ごと・単元ごとに整理しました。下の表から、学びたい単元・取り組みたい問題に直接ジャンプできます。</p>
 </header>
 
 <main>
 
-<div class="unit">
-<div class="unit-title"><span class="num">📚</span>講座一覧</div>
-
-<div style="display:grid;grid-template-columns:1fr;gap:14px;">
-
-<a href="ch01.html" style="text-decoration:none;color:inherit;">
-<div style="background:#FFF3E0;border:2px solid #FFB74D;border-radius:12px;padding:16px 20px;cursor:pointer;transition:all 0.2s;">
-<div style="display:flex;align-items:center;justify-content:space-between;">
-<div>
-<div style="color:#FF8C42;font-weight:bold;font-size:13px;">第1講 ★☆☆</div>
-<h3 style="margin:4px 0;color:#2C3E50;">分解</h3>
-<p style="margin:0;color:#666;font-size:14px;">化学変化のスタート。物質を加熱したり電気を流したりすると、別の物質に分かれます。</p>
-</div>
-<div style="font-size:32px;color:#FF8C42;">→</div>
-</div>
-</div>
-</a>
-
-<a href="ch02.html" style="text-decoration:none;color:inherit;">
-<div style="background:#FFF3E0;border:2px solid #FFB74D;border-radius:12px;padding:16px 20px;cursor:pointer;transition:all 0.2s;">
-<div style="display:flex;align-items:center;justify-content:space-between;">
-<div>
-<div style="color:#FF8C42;font-weight:bold;font-size:13px;">第2講 ★★☆</div>
-<h3 style="margin:4px 0;color:#2C3E50;">物質の表し方(原子・分子・化学式)</h3>
-<p style="margin:0;color:#666;font-size:14px;">物質を記号で表す方法を学びます。</p>
-</div>
-<div style="font-size:32px;color:#FF8C42;">→</div>
-</div>
-</div>
-</a>
-
-<div style="background:#F5F5F5;border:2px solid #E0E0E0;border-radius:12px;padding:16px 20px;opacity:0.6;">
-<div style="color:#999;font-weight:bold;font-size:13px;">第3講 ★★☆(準備中)</div>
-<h3 style="margin:4px 0;color:#999;">化合(物質が結びつく反応)</h3>
-<p style="margin:0;color:#999;font-size:14px;">2種類以上の物質が結びついて新しい物質ができます。</p>
+<!-- ===== レジェンド ===== -->
+<div class="legend">
+  <div class="legend-item">
+    <span class="legend-swatch" style="background:#FFF8E7;border-color:#FFD699;"></span>
+    <span>📖 学習(各単元の説明とチャレンジ)</span>
+  </div>
+  <div class="legend-item">
+    <span class="legend-swatch" style="background:#E3F2FD;border-color:#90CAF9;"></span>
+    <span>📝 問題(練習・確認・単元末テスト)</span>
+  </div>
+  <div class="legend-item">
+    <span class="legend-swatch" style="background:#F3E5F5;border-color:#CE93D8;"></span>
+    <span>📚 サブツール</span>
+  </div>
+  <div class="legend-item">
+    <span class="legend-swatch" style="background:#F5F5F5;border-color:#DDD;border-style:dashed;"></span>
+    <span>準備中</span>
+  </div>
 </div>
 
-<div style="background:#F5F5F5;border:2px solid #E0E0E0;border-radius:12px;padding:16px 20px;opacity:0.6;">
-<div style="color:#999;font-weight:bold;font-size:13px;">第4講以降(準備中)</div>
-<h3 style="margin:4px 0;color:#999;">酸化・燃焼 / 還元 / 質量保存 など</h3>
-<p style="margin:0;color:#999;font-size:14px;">化学変化の全単元を順次公開予定です。</p>
+<p class="matrix-hint">👉 横にスクロールできます</p>
+
+<!-- ===== マトリクス目次 ===== -->
+<div class="matrix-wrap">
+<table class="matrix-tbl">
+  <thead>
+    <tr>
+      <th class="col-chapter">講</th>
+      <th>単元1</th>
+      <th>単元2</th>
+      <th>単元3</th>
+      <th>単元4</th>
+      <th>単元5</th>
+      <th>📝 練習</th>
+      <th>📋 確認</th>
+      <th>🏆 テスト</th>
+      <th>📚 サブ</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- ▼ 第1講 分解 -->
+    <tr>
+      <td>
+        <div class="chap-label">
+          <div class="chap-num">第1講 ★★☆</div>
+          <div class="chap-title">分解</div>
+          <div class="chap-desc">物質が分かれる反応</div>
+        </div>
+      </td>
+      <td>
+        <a href="ch01.html" class="cell-link">
+          <span class="ico">📖</span>
+          <span class="label">化学変化と<br>分解</span>
+        </a>
+      </td>
+      <td>
+        <a href="ch01.html" class="cell-link">
+          <span class="ico">📖</span>
+          <span class="label">炭酸水素<br>ナトリウム</span>
+          <span class="sublabel">(2-1〜2-3)</span>
+        </a>
+      </td>
+      <td>
+        <a href="ch01.html" class="cell-link">
+          <span class="ico">📖</span>
+          <span class="label">酸化銀の<br>分解</span>
+        </a>
+      </td>
+      <td>
+        <a href="ch01.html" class="cell-link">
+          <span class="ico">📖</span>
+          <span class="label">水の<br>電気分解</span>
+        </a>
+      </td>
+      <td>
+        <a href="ch01.html" class="cell-link">
+          <span class="ico">📖</span>
+          <span class="label">塩化銅の<br>電気分解</span>
+        </a>
+      </td>
+      <td>
+        <a href="ch01_practice.html" class="cell-link q-cell">
+          <span class="ico">📝</span>
+          <span class="label">練習問題</span>
+        </a>
+      </td>
+      <td>
+        <div class="cell-prep">
+          <span class="ico">📋</span>
+          <span class="label">準備中</span>
+        </div>
+      </td>
+      <td>
+        <div class="cell-prep">
+          <span class="ico">🏆</span>
+          <span class="label">準備中</span>
+        </div>
+      </td>
+      <td>
+        <div class="cell-empty"></div>
+      </td>
+    </tr>
+
+    <!-- ▼ 第2講 物質の表し方 -->
+    <tr>
+      <td>
+        <div class="chap-label">
+          <div class="chap-num">第2講 ★★☆</div>
+          <div class="chap-title">物質の表し方</div>
+          <div class="chap-desc">原子・分子・化学式</div>
+        </div>
+      </td>
+      <td>
+        <a href="ch02.html" class="cell-link">
+          <span class="ico">📖</span>
+          <span class="label">原子</span>
+        </a>
+      </td>
+      <td>
+        <a href="ch02.html" class="cell-link">
+          <span class="ico">📖</span>
+          <span class="label">元素記号</span>
+        </a>
+      </td>
+      <td>
+        <a href="ch02.html" class="cell-link">
+          <span class="ico">📖</span>
+          <span class="label">分子と<br>化学式</span>
+        </a>
+      </td>
+      <td>
+        <div class="cell-empty"></div>
+      </td>
+      <td>
+        <div class="cell-empty"></div>
+      </td>
+      <td>
+        <div class="cell-prep">
+          <span class="ico">📝</span>
+          <span class="label">準備中</span>
+        </div>
+      </td>
+      <td>
+        <div class="cell-prep">
+          <span class="ico">📋</span>
+          <span class="label">準備中</span>
+        </div>
+      </td>
+      <td>
+        <div class="cell-prep">
+          <span class="ico">🏆</span>
+          <span class="label">準備中</span>
+        </div>
+      </td>
+      <td>
+        <a href="ch02_elements.html" class="cell-link tool-cell">
+          <span class="ico">📚</span>
+          <span class="label">元素記号<br>トレーナー</span>
+        </a>
+      </td>
+    </tr>
+
+    <!-- ▼ 第3講 化合 -->
+    <tr>
+      <td>
+        <div class="chap-label">
+          <div class="chap-num">第3講 ★★☆</div>
+          <div class="chap-title">化合</div>
+          <div class="chap-desc">物質が結びつく反応</div>
+        </div>
+      </td>
+      <td>
+        <a href="ch03.html" class="cell-link">
+          <span class="ico">📖</span>
+          <span class="label">化合とは</span>
+        </a>
+      </td>
+      <td>
+        <a href="ch03.html" class="cell-link">
+          <span class="ico">📖</span>
+          <span class="label">鉄+硫黄</span>
+        </a>
+      </td>
+      <td>
+        <a href="ch03.html" class="cell-link">
+          <span class="ico">📖</span>
+          <span class="label">銅+硫黄</span>
+        </a>
+      </td>
+      <td>
+        <div class="cell-empty"></div>
+      </td>
+      <td>
+        <div class="cell-empty"></div>
+      </td>
+      <td>
+        <div class="cell-prep">
+          <span class="ico">📝</span>
+          <span class="label">準備中</span>
+        </div>
+      </td>
+      <td>
+        <div class="cell-prep">
+          <span class="ico">📋</span>
+          <span class="label">準備中</span>
+        </div>
+      </td>
+      <td>
+        <div class="cell-prep">
+          <span class="ico">🏆</span>
+          <span class="label">準備中</span>
+        </div>
+      </td>
+      <td>
+        <div class="cell-empty"></div>
+      </td>
+    </tr>
+
+    <!-- ▼ 第4講 酸化・燃焼 -->
+    <tr>
+      <td>
+        <div class="chap-label">
+          <div class="chap-num">第4講 ★★☆</div>
+          <div class="chap-title">酸化・燃焼</div>
+          <div class="chap-desc">物質が酸素と結びつく反応</div>
+        </div>
+      </td>
+      <td>
+        <a href="ch04.html" class="cell-link">
+          <span class="ico">📖</span>
+          <span class="label">酸化と<br>燃焼</span>
+        </a>
+      </td>
+      <td>
+        <a href="ch04.html" class="cell-link">
+          <span class="ico">📖</span>
+          <span class="label">スチール<br>ウール</span>
+        </a>
+      </td>
+      <td>
+        <a href="ch04.html" class="cell-link">
+          <span class="ico">📖</span>
+          <span class="label">集気びん<br>3物質</span>
+        </a>
+      </td>
+      <td>
+        <div class="cell-empty"></div>
+      </td>
+      <td>
+        <div class="cell-empty"></div>
+      </td>
+      <td>
+        <div class="cell-prep">
+          <span class="ico">📝</span>
+          <span class="label">準備中</span>
+        </div>
+      </td>
+      <td>
+        <div class="cell-prep">
+          <span class="ico">📋</span>
+          <span class="label">準備中</span>
+        </div>
+      </td>
+      <td>
+        <div class="cell-prep">
+          <span class="ico">🏆</span>
+          <span class="label">準備中</span>
+        </div>
+      </td>
+      <td>
+        <div class="cell-empty"></div>
+      </td>
+    </tr>
+
+    <!-- ▼ 第5講以降(準備中) -->
+    <tr>
+      <td>
+        <div class="chap-label" style="background:linear-gradient(135deg,#F5F5F5 0%,#E0E0E0 100%);opacity:0.7;">
+          <div class="chap-num" style="color:#888;">第5講以降(準備中)</div>
+          <div class="chap-title" style="color:#999;">還元 / 質量保存 / 定比例 など</div>
+          <div class="chap-desc" style="color:#aaa;">順次公開予定</div>
+        </div>
+      </td>
+      <td colspan="9" style="text-align:center;color:#aaa;font-size:13px;padding:20px 10px;background:#FAFAFA;border-radius:8px;">
+        準備中
+      </td>
+    </tr>
+
+  </tbody>
+</table>
 </div>
 
-</div>
+<!-- ===== 補足リンク ===== -->
+<div style="margin-top:30px;padding:18px;background:#FFF8E7;border:1px solid #FFD699;border-radius:10px;">
+  <h3 style="margin:0 0 8px;color:#E67838;font-size:15px;">💡 はじめての方へ</h3>
+  <p style="margin:0;font-size:13px;color:#555;line-height:1.7;">
+    まずは <a href="ch01.html" style="color:#E67838;font-weight:bold;">第1講 分解</a> から順番に取り組むのがおすすめです。<br>
+    各単元には「📖 説明 → 🎯 チャレンジ → ✏️ 確認問題」の流れがあり、説明を読みながら語群を埋めていく <strong>チャレンジ</strong> でベストタイムを縮められます。
+  </p>
 </div>
 
 </main>

@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第9講 化学変化と質量計算 | GAMBA中学理科</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="ch09">
+
+<nav class="topnav">
+  <span class="brand">🧪 GAMBA 中学理科 化学変化</span>
+  <span class="sep">|</span>
+  <a href="index.html">📊 単元表</a>
+</nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="crumb">第9講 / 化学変化を数で計算する</div>
+  <h1>化学変化と質量計算 <span class="stars">★★★</span></h1>
+  <p class="sub">第8講で学んだ「質量保存の法則」を使うと、反応する物質の質量を計算で求められます。銅やマグネシウムの酸化を例に、質量比をきちんとマスターしましょう。入試でもよく出る重要分野です!</p>
+</header>
+
+<main>
+
+<!-- ================================================== -->
+<!--  単元1:銅の酸化と質量比                             -->
+<!-- ================================================== -->
+<div class="unit">
+  <div class="unit-title"><span class="num">1</span>銅の酸化と質量比 ― Cu : O₂ : CuO = 4 : 1 : 5</div>
+
+  <div class="stage challenge" data-ch-id="ch09-u1" data-target="#ch09-u1-readbox">
+    <div class="stage-head">
+      <span class="stage-label read">📖 説明</span>
+      <div class="stage-actions">
+        <button class="audio-btn" onclick="playAudio('ch09_u1_intro')">
+          <span class="ico">▶</span> 音声で聞く
+        </button>
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="ch09-u1-readbox">
+      <p>第7講で、銅の酸化の化学反応式を学びました。</p>
+
+      <p style="text-align:center;font-size:18px;font-weight:bold;margin:14px 0;color:#2C2C2A;">2Cu + O₂ → 2CuO</p>
+
+      <p>この反応では、銅と酸素と酸化銅の<strong>質量の比</strong>が決まっています。実験で確かめてみましょう。</p>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 実験:銅粉を加熱して質量をはかる</h4>
+
+      <p>ステンレス皿に銅粉(Cu)をのせて、ガスバーナーで加熱します。銅は空気中の酸素と結びついて、酸化銅(CuO)に変わります。加熱した後の質量をはかると、加熱前より<strong>重く</strong>なっています。これは、結びついた酸素の分だけ質量が増えたからです。</p>
+
+      <p>下のグラフは、銅粉の質量を 0g、1.0g、2.0g、3.0g、4.0g と変えて加熱したときに、できた酸化銅の質量を表したものです。</p>
+
+      <div class="fig-with-table" style="margin:14px 0;">
+        <div class="fig-main">
+<svg viewBox="0 0 540 380" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;height:auto;display:block;margin:0 auto;" role="img">
+<title>銅の質量と酸化銅の質量の関係</title>
+<desc>銅0~4gを加熱したときの酸化銅の質量変化を示すグラフ。比例関係でCu:CuO=4:5</desc>
+
+<!-- タイトル -->
+<text x="270" y="22" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="500" fill="#2C2C2A">銅の質量と酸化銅の質量の関係</text>
+
+<!-- グラフエリア(枠) -->
+<rect x="80" y="40" width="380" height="280" fill="#FAFAFA" stroke="#5F5E5A" stroke-width="1.5"/>
+
+<!-- グリッド線(縦) -->
+<line x1="155" y1="40" x2="155" y2="320" stroke="#DDD" stroke-width="0.6"/>
+<line x1="230" y1="40" x2="230" y2="320" stroke="#DDD" stroke-width="0.6"/>
+<line x1="305" y1="40" x2="305" y2="320" stroke="#DDD" stroke-width="0.6"/>
+<line x1="380" y1="40" x2="380" y2="320" stroke="#DDD" stroke-width="0.6"/>
+
+<!-- グリッド線(横) -->
+<line x1="80" y1="264" x2="460" y2="264" stroke="#DDD" stroke-width="0.6"/>
+<line x1="80" y1="208" x2="460" y2="208" stroke="#DDD" stroke-width="0.6"/>
+<line x1="80" y1="152" x2="460" y2="152" stroke="#DDD" stroke-width="0.6"/>
+<line x1="80" y1="96" x2="460" y2="96" stroke="#DDD" stroke-width="0.6"/>
+
+<!-- X軸ラベル(銅 g) -->
+<text x="80" y="338" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#444">0</text>
+<text x="155" y="338" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#444">1.0</text>
+<text x="230" y="338" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#444">2.0</text>
+<text x="305" y="338" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#444">3.0</text>
+<text x="380" y="338" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#444">4.0</text>
+<text x="270" y="362" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#2C2C2A">銅(Cu)の質量〔g〕</text>
+
+<!-- Y軸ラベル(酸化銅 g) -->
+<text x="72" y="324" text-anchor="end" font-family="sans-serif" font-size="11" fill="#444">0</text>
+<text x="72" y="268" text-anchor="end" font-family="sans-serif" font-size="11" fill="#444">1.0</text>
+<text x="72" y="212" text-anchor="end" font-family="sans-serif" font-size="11" fill="#444">2.0</text>
+<text x="72" y="156" text-anchor="end" font-family="sans-serif" font-size="11" fill="#444">3.0</text>
+<text x="72" y="100" text-anchor="end" font-family="sans-serif" font-size="11" fill="#444">4.0</text>
+<text x="72" y="48" text-anchor="end" font-family="sans-serif" font-size="11" fill="#444">5.0</text>
+<text x="30" y="180" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#2C2C2A" transform="rotate(-90, 30, 180)">酸化銅(CuO)の質量〔g〕</text>
+
+<!-- グラフ線(Cu 4.0g → CuO 5.0g、傾きは 5/4 = 1.25) -->
+<!-- 始点(0, 320)、終点(380, 40) -->
+<line x1="80" y1="320" x2="380" y2="40" stroke="#D85A30" stroke-width="2.5"/>
+
+<!-- データ点(2.0g, 2.5g) -->
+<circle cx="230" cy="180" r="4" fill="#D85A30"/>
+<line x1="230" y1="180" x2="230" y2="320" stroke="#D85A30" stroke-width="0.8" stroke-dasharray="3,3"/>
+<line x1="230" y1="180" x2="80" y2="180" stroke="#D85A30" stroke-width="0.8" stroke-dasharray="3,3"/>
+<text x="240" y="174" font-family="sans-serif" font-size="11" font-weight="500" fill="#791F1F">(2.0, 2.5)</text>
+
+<!-- 凡例ボックス -->
+<rect x="290" y="50" width="160" height="60" rx="6" fill="#FFF8E7" stroke="#FFB300" stroke-width="0.6"/>
+<text x="370" y="68" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="500" fill="#7C4A00">★ Cu : CuO = 4 : 5</text>
+<text x="370" y="86" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7C4A00">Cu : O₂ = 4 : 1</text>
+<text x="370" y="102" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7C4A00">→ 比例関係になる</text>
+</svg>
+        </div>
+      </div>
+
+      <p>グラフはきれいな<span class="kw-blank" data-a="比例">比例</span>のグラフ(原点を通る直線)になっていますね。たとえば、銅 2.0g を加熱すると酸化銅は 2.5g できることが読み取れます。</p>
+
+      <p>このとき、結びついた酸素の質量は <strong>2.5 − 2.0 = 0.5g</strong> です(質量保存の法則)。</p>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 質量比を求めよう</h4>
+
+      <p>銅 2.0g、酸素 0.5g、酸化銅 2.5g の比を、もっとも簡単な整数比で表すと:</p>
+
+      <p style="text-align:center;font-size:14px;margin:8px 0;color:#5F5E5A;">Cu : O₂ : CuO = 2.0 : 0.5 : 2.5 = <strong>4 : 1 : 5</strong></p>
+
+      <div class="point-box" style="background:#FFF8E7;border-left:4px solid #FFB300;">
+        <span class="label">⚗️ 【重要】銅の酸化の質量比</span>
+        <p style="margin:10px 0;text-align:center;font-size:18px;font-weight:bold;color:#2C2C2A;">Cu : O₂ : CuO = <span class="kw-blank" data-a="4">4</span> : <span class="kw-blank" data-a="1">1</span> : <span class="kw-blank" data-a="5">5</span></p>
+      </div>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 例題で計算してみよう</h4>
+
+      <div class="point-box" style="background:#E6F1FB;border-left:4px solid #185FA5;">
+        <span class="label" style="color:#0C447C;">📝 例題1</span>
+        <p style="margin:6px 0;">銅粉 8g を完全に酸化させると、何 g の酸素が結びつくか?</p>
+        <p style="margin:6px 0;color:#444;font-size:13px;">解き方:</p>
+        <ul style="margin:6px 0 6px 20px;line-height:1.7;font-size:14px;">
+          <li>Cu : O₂ = 4 : 1</li>
+          <li>求める酸素の質量を χg とすると、8 : χ = 4 : 1</li>
+          <li>4χ = 8 × 1 = 8 → χ = <strong>2</strong></li>
+          <li>答: <strong>2 g</strong></li>
+        </ul>
+      </div>
+
+      <div class="point-box" style="background:#E6F1FB;border-left:4px solid #185FA5;margin-top:10px;">
+        <span class="label" style="color:#0C447C;">📝 例題2</span>
+        <p style="margin:6px 0;">銅粉 2.4g を完全に酸化させると、何 g の酸化銅ができるか?</p>
+        <p style="margin:6px 0;color:#444;font-size:13px;">解き方:</p>
+        <ul style="margin:6px 0 6px 20px;line-height:1.7;font-size:14px;">
+          <li>Cu : CuO = 4 : 5</li>
+          <li>求める酸化銅の質量を χg とすると、2.4 : χ = 4 : 5</li>
+          <li>4χ = 2.4 × 5 = 12 → χ = <strong>3</strong></li>
+          <li>答: <strong>3 g</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="point-box">
+      <span class="label">★ 覚えよう!</span>
+      <ul>
+        <li>銅の酸化:2Cu + O₂ → 2CuO</li>
+        <li>質量比 Cu : O₂ : CuO = 4 : 1 : 5</li>
+        <li>銅と酸化銅の質量は<strong>比例関係</strong>(原点を通る直線)</li>
+        <li>計算は「a:b = c:d」の比例式を立てて解く</li>
+      </ul>
+    </div>
+
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、説明文の空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <!-- ▼ ミニテスト -->
+  <div class="minitest-block">
+    <div class="mt-block-title">✏️ ミニテスト(全4問)</div>
+
+    <div class="q4" data-correct="b">
+      <div class="q4-stem"><span class="q4-num">問1</span>銅と酸素が化合するときの質量比 Cu : O₂ はいくつか。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:2 : 1</button>
+        <button class="q4-c" data-v="b">イ:4 : 1</button>
+        <button class="q4-c" data-v="c">ウ:3 : 2</button>
+        <button class="q4-c" data-v="d">エ:5 : 1</button>
+      </div>
+      <div class="q4-exp">
+        <p style="margin:4px 0;"><strong>正解:イ:4 : 1</strong></p>
+        <p style="margin:4px 0;font-size:13px;">化学反応式 2Cu + O₂ → 2CuO で、銅と酸素と酸化銅の質量比は決まっています。</p>
+        <p style="margin:4px 0;font-size:13px;">グラフから、銅 2.0g を加熱すると酸化銅 2.5g ができるので:</p>
+        <ul style="margin:4px 0 4px 20px;font-size:13px;line-height:1.7;">
+          <li>結びついた酸素 = 2.5 − 2.0 = 0.5g</li>
+          <li>Cu : O₂ : CuO = 2.0 : 0.5 : 2.5 = <strong>4 : 1 : 5</strong></li>
+        </ul>
+        <p style="margin:4px 0;font-size:13px;">よって Cu : O₂ = <strong>4 : 1</strong>。</p>
+      </div>
+    </div>
+
+    <div class="q4" data-correct="c">
+      <div class="q4-stem"><span class="q4-num">問2</span>銅 4.0g を完全に酸化させると、できる酸化銅は何 g か。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:4.0 g</button>
+        <button class="q4-c" data-v="b">イ:4.5 g</button>
+        <button class="q4-c" data-v="c">ウ:5.0 g</button>
+        <button class="q4-c" data-v="d">エ:5.5 g</button>
+      </div>
+      <div class="q4-exp">
+        <p style="margin:4px 0;"><strong>正解:ウ:5.0 g</strong></p>
+        <p style="margin:4px 0;font-size:13px;">Cu : CuO = 4 : 5 を使います。求める酸化銅の質量を χg とすると:</p>
+        <ul style="margin:4px 0 4px 20px;font-size:13px;line-height:1.7;">
+          <li>4 : 5 = 4.0 : χ</li>
+          <li>4 × χ = 5 × 4.0(外項の積=内項の積)</li>
+          <li>4χ = 20</li>
+          <li>χ = 20 ÷ 4 = <strong>5.0 g</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="q4" data-correct="b">
+      <div class="q4-stem"><span class="q4-num">問3</span>銅 1.6g に結びつく酸素は何 g か。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:0.2 g</button>
+        <button class="q4-c" data-v="b">イ:0.4 g</button>
+        <button class="q4-c" data-v="c">ウ:0.8 g</button>
+        <button class="q4-c" data-v="d">エ:1.6 g</button>
+      </div>
+      <div class="q4-exp">
+        <p style="margin:4px 0;"><strong>正解:イ:0.4 g</strong></p>
+        <p style="margin:4px 0;font-size:13px;">Cu : O₂ = 4 : 1 を使います。結びつく酸素の質量を χg とすると:</p>
+        <ul style="margin:4px 0 4px 20px;font-size:13px;line-height:1.7;">
+          <li>4 : 1 = 1.6 : χ</li>
+          <li>4 × χ = 1 × 1.6</li>
+          <li>4χ = 1.6</li>
+          <li>χ = 1.6 ÷ 4 = <strong>0.4 g</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="q4" data-correct="c">
+      <div class="q4-stem"><span class="q4-num">問4</span>酸化銅 5g を作るには、銅は何 g 必要か。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:1 g</button>
+        <button class="q4-c" data-v="b">イ:2 g</button>
+        <button class="q4-c" data-v="c">ウ:4 g</button>
+        <button class="q4-c" data-v="d">エ:5 g</button>
+      </div>
+      <div class="q4-exp">
+        <p style="margin:4px 0;"><strong>正解:ウ:4 g</strong></p>
+        <p style="margin:4px 0;font-size:13px;">Cu : CuO = 4 : 5 を使います。必要な銅の質量を χg とすると:</p>
+        <ul style="margin:4px 0 4px 20px;font-size:13px;line-height:1.7;">
+          <li>4 : 5 = χ : 5</li>
+          <li>5 × χ = 4 × 5</li>
+          <li>5χ = 20</li>
+          <li>χ = 20 ÷ 5 = <strong>4 g</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-block-result"></div>
+    <div style="text-align:center;">
+      <button class="mt-block-reset">↻ もう一度</button>
+    </div>
+  </div>
+
+  <div class="ranking">
+    <h3>🏆 ベストタイム</h3>
+    <ul id="ranking-ch09-u1" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('ch09-u1')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+</div>
+
+
+<!-- ================================================== -->
+<!--  単元2:マグネシウムの燃焼と質量比                   -->
+<!-- ================================================== -->
+<div class="unit">
+  <div class="unit-title"><span class="num">2</span>マグネシウムの燃焼と質量比 ― Mg : O₂ : MgO = 3 : 2 : 5</div>
+
+  <div class="stage challenge" data-ch-id="ch09-u2" data-target="#ch09-u2-readbox">
+    <div class="stage-head">
+      <span class="stage-label read">📖 説明</span>
+      <div class="stage-actions">
+        <button class="audio-btn" onclick="playAudio('ch09_u2_intro')">
+          <span class="ico">▶</span> 音声で聞く
+        </button>
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="ch09-u2-readbox">
+      <p>マグネシウム(Mg)も同じように、酸素と結びついて酸化マグネシウム(MgO)になります。化学反応式は次のとおりです。</p>
+
+      <p style="text-align:center;font-size:18px;font-weight:bold;margin:14px 0;color:#2C2C2A;">2Mg + O₂ → 2MgO</p>
+
+      <p>マグネシウムは強い<strong>光と熱</strong>を出して燃えるので、この反応は特に「<span class="kw-blank" data-a="燃焼">燃焼</span>」と呼ばれます。</p>
+
+      <p>銅のときと同じように、マグネシウムの質量を変えて燃焼させ、できた酸化マグネシウムの質量をはかると、下のグラフのようになります。</p>
+
+      <div class="fig-with-table" style="margin:14px 0;">
+        <div class="fig-main">
+<svg viewBox="0 0 540 380" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;height:auto;display:block;margin:0 auto;" role="img">
+<title>マグネシウムの質量と酸化マグネシウムの質量の関係</title>
+<desc>マグネシウム0~1.8gを燃焼したときの酸化マグネシウムの質量変化を示すグラフ。比例関係でMg:MgO=3:5</desc>
+
+<!-- タイトル -->
+<text x="270" y="22" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="500" fill="#2C2C2A">マグネシウムと酸化マグネシウムの質量の関係</text>
+
+<!-- グラフエリア -->
+<rect x="80" y="40" width="380" height="280" fill="#FAFAFA" stroke="#5F5E5A" stroke-width="1.5"/>
+
+<!-- グリッド線(縦):0, 0.6, 1.2, 1.8 -->
+<line x1="206" y1="40" x2="206" y2="320" stroke="#DDD" stroke-width="0.6"/>
+<line x1="333" y1="40" x2="333" y2="320" stroke="#DDD" stroke-width="0.6"/>
+<line x1="460" y1="40" x2="460" y2="320" stroke="#DDD" stroke-width="0.6"/>
+
+<!-- グリッド線(横):0, 1.0, 2.0, 3.0 -->
+<line x1="80" y1="227" x2="460" y2="227" stroke="#DDD" stroke-width="0.6"/>
+<line x1="80" y1="134" x2="460" y2="134" stroke="#DDD" stroke-width="0.6"/>
+<line x1="80" y1="40" x2="460" y2="40" stroke="#DDD" stroke-width="0.6"/>
+
+<!-- X軸ラベル -->
+<text x="80" y="338" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#444">0</text>
+<text x="206" y="338" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#444">0.6</text>
+<text x="333" y="338" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#444">1.2</text>
+<text x="460" y="338" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#444">1.8</text>
+<text x="270" y="362" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#2C2C2A">マグネシウム(Mg)の質量〔g〕</text>
+
+<!-- Y軸ラベル -->
+<text x="72" y="324" text-anchor="end" font-family="sans-serif" font-size="11" fill="#444">0</text>
+<text x="72" y="231" text-anchor="end" font-family="sans-serif" font-size="11" fill="#444">1.0</text>
+<text x="72" y="138" text-anchor="end" font-family="sans-serif" font-size="11" fill="#444">2.0</text>
+<text x="72" y="44" text-anchor="end" font-family="sans-serif" font-size="11" fill="#444">3.0</text>
+<text x="30" y="180" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#2C2C2A" transform="rotate(-90, 30, 180)">酸化マグネシウム(MgO)の質量〔g〕</text>
+
+<!-- グラフ線:Mg 1.8g → MgO 3.0g(傾き 5/3) -->
+<line x1="80" y1="320" x2="460" y2="40" stroke="#FAC775" stroke-width="2.5"/>
+
+<!-- データ点(0.6, 1.0) -->
+<circle cx="206" cy="227" r="4" fill="#854F0B"/>
+<line x1="206" y1="227" x2="206" y2="320" stroke="#854F0B" stroke-width="0.8" stroke-dasharray="3,3"/>
+<line x1="206" y1="227" x2="80" y2="227" stroke="#854F0B" stroke-width="0.8" stroke-dasharray="3,3"/>
+<text x="216" y="221" font-family="sans-serif" font-size="11" font-weight="500" fill="#854F0B">(0.6, 1.0)</text>
+
+<!-- 凡例ボックス -->
+<rect x="290" y="50" width="160" height="60" rx="6" fill="#FFF8E7" stroke="#FFB300" stroke-width="0.6"/>
+<text x="370" y="68" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="500" fill="#7C4A00">★ Mg : MgO = 3 : 5</text>
+<text x="370" y="86" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7C4A00">Mg : O₂ = 3 : 2</text>
+<text x="370" y="102" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7C4A00">→ 比例関係になる</text>
+</svg>
+        </div>
+      </div>
+
+      <p>たとえば、マグネシウム 0.6g を燃焼させると、酸化マグネシウムは 1.0g できます。結びついた酸素の質量は <strong>1.0 − 0.6 = 0.4g</strong> です。</p>
+
+      <p>質量比は:</p>
+
+      <p style="text-align:center;font-size:14px;margin:8px 0;color:#5F5E5A;">Mg : O₂ : MgO = 0.6 : 0.4 : 1.0 = <strong>3 : 2 : 5</strong></p>
+
+      <div class="point-box" style="background:#FFF8E7;border-left:4px solid #FFB300;">
+        <span class="label">⚗️ 【重要】マグネシウムの燃焼の質量比</span>
+        <p style="margin:10px 0;text-align:center;font-size:18px;font-weight:bold;color:#2C2C2A;">Mg : O₂ : MgO = <span class="kw-blank" data-a="3">3</span> : <span class="kw-blank" data-a="2">2</span> : <span class="kw-blank" data-a="5">5</span></p>
+      </div>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 銅とマグネシウムの語呂合わせ</h4>
+
+      <div class="point-box" style="background:#FCEBEB;border-left:4px solid #A32D2D;">
+        <span class="label" style="color:#A32D2D;">💡 暗記のコツ</span>
+        <p style="margin:10px 0;font-size:16px;text-align:center;font-weight:500;color:#791F1F;">「マーさんは同士」</p>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;margin:8px 0;">
+          <tr style="background:#FFFFFF;">
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;"><strong style="color:#A32D2D;">マ</strong>ーさん<br>(Mg = <strong>3</strong>)</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">は</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;"><strong style="color:#A32D2D;">同士</strong><br>(Cu = <strong>4</strong>)</td>
+          </tr>
+        </table>
+        <p style="margin:8px 0 0;font-size:12px;color:#791F1F;">「マ」=Mg=3、「同士(どうし)」の音から Cu=4 を連想します。それぞれが酸素と結びつく比は、Mg:O₂=3:2、Cu:O₂=4:1。</p>
+      </div>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 例題で計算してみよう</h4>
+
+      <div class="point-box" style="background:#E6F1FB;border-left:4px solid #185FA5;">
+        <span class="label" style="color:#0C447C;">📝 例題1</span>
+        <p style="margin:6px 0;">マグネシウム 0.9g を完全に燃焼させると、何 g の酸素が結びつくか?</p>
+        <ul style="margin:6px 0 6px 20px;line-height:1.7;font-size:14px;">
+          <li>Mg : O₂ = 3 : 2</li>
+          <li>0.9 : χ = 3 : 2 → 3χ = 0.9 × 2 = 1.8 → χ = <strong>0.6</strong></li>
+          <li>答: <strong>0.6 g</strong></li>
+        </ul>
+      </div>
+
+      <div class="point-box" style="background:#E6F1FB;border-left:4px solid #185FA5;margin-top:10px;">
+        <span class="label" style="color:#0C447C;">📝 例題2</span>
+        <p style="margin:6px 0;">マグネシウム 2.4g を完全に燃焼させると、何 g の酸化マグネシウムができるか?</p>
+        <ul style="margin:6px 0 6px 20px;line-height:1.7;font-size:14px;">
+          <li>Mg : MgO = 3 : 5</li>
+          <li>2.4 : χ = 3 : 5 → 3χ = 2.4 × 5 = 12 → χ = <strong>4</strong></li>
+          <li>答: <strong>4 g</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="point-box">
+      <span class="label">★ 覚えよう!</span>
+      <ul>
+        <li>マグネシウムの燃焼:2Mg + O₂ → 2MgO</li>
+        <li>質量比 Mg : O₂ : MgO = 3 : 2 : 5</li>
+        <li>暗記法:「マーさんは同士」(Mg=3、Cu=4)</li>
+        <li>計算は比例式 a:b = c:d を立てて解く</li>
+      </ul>
+    </div>
+
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、説明文の空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <!-- ▼ ミニテスト -->
+  <div class="minitest-block">
+    <div class="mt-block-title">✏️ ミニテスト(全4問)</div>
+
+    <div class="q4" data-correct="c">
+      <div class="q4-stem"><span class="q4-num">問1</span>マグネシウムと酸素が化合するときの質量比 Mg : O₂ はいくつか。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:4 : 1</button>
+        <button class="q4-c" data-v="b">イ:5 : 2</button>
+        <button class="q4-c" data-v="c">ウ:3 : 2</button>
+        <button class="q4-c" data-v="d">エ:2 : 3</button>
+      </div>
+      <div class="q4-exp">
+        <p style="margin:4px 0;"><strong>正解:ウ:3 : 2</strong></p>
+        <p style="margin:4px 0;font-size:13px;">化学反応式 2Mg + O₂ → 2MgO で、マグネシウムと酸素と酸化マグネシウムの質量比は決まっています。</p>
+        <p style="margin:4px 0;font-size:13px;">グラフから、マグネシウム 0.6g を燃焼させると酸化マグネシウム 1.0g ができるので:</p>
+        <ul style="margin:4px 0 4px 20px;font-size:13px;line-height:1.7;">
+          <li>結びついた酸素 = 1.0 − 0.6 = 0.4g</li>
+          <li>Mg : O₂ : MgO = 0.6 : 0.4 : 1.0 = <strong>3 : 2 : 5</strong></li>
+        </ul>
+        <p style="margin:4px 0;font-size:13px;">よって Mg : O₂ = <strong>3 : 2</strong>。「マーさんは同士」で Mg=3、Cu=4 を覚えましょう。</p>
+      </div>
+    </div>
+
+    <div class="q4" data-correct="c">
+      <div class="q4-stem"><span class="q4-num">問2</span>マグネシウム 1.5g を完全に燃焼させると、できる酸化マグネシウムは何 g か。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:1.5 g</button>
+        <button class="q4-c" data-v="b">イ:2.0 g</button>
+        <button class="q4-c" data-v="c">ウ:2.5 g</button>
+        <button class="q4-c" data-v="d">エ:3.0 g</button>
+      </div>
+      <div class="q4-exp">
+        <p style="margin:4px 0;"><strong>正解:ウ:2.5 g</strong></p>
+        <p style="margin:4px 0;font-size:13px;">Mg : MgO = 3 : 5 を使います。求める酸化マグネシウムの質量を χg とすると:</p>
+        <ul style="margin:4px 0 4px 20px;font-size:13px;line-height:1.7;">
+          <li>3 : 5 = 1.5 : χ</li>
+          <li>3 × χ = 5 × 1.5</li>
+          <li>3χ = 7.5</li>
+          <li>χ = 7.5 ÷ 3 = <strong>2.5 g</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="q4" data-correct="b">
+      <div class="q4-stem"><span class="q4-num">問3</span>マグネシウム 1.8g に結びつく酸素は何 g か。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:0.6 g</button>
+        <button class="q4-c" data-v="b">イ:1.2 g</button>
+        <button class="q4-c" data-v="c">ウ:1.8 g</button>
+        <button class="q4-c" data-v="d">エ:2.4 g</button>
+      </div>
+      <div class="q4-exp">
+        <p style="margin:4px 0;"><strong>正解:イ:1.2 g</strong></p>
+        <p style="margin:4px 0;font-size:13px;">Mg : O₂ = 3 : 2 を使います。結びつく酸素の質量を χg とすると:</p>
+        <ul style="margin:4px 0 4px 20px;font-size:13px;line-height:1.7;">
+          <li>3 : 2 = 1.8 : χ</li>
+          <li>3 × χ = 2 × 1.8</li>
+          <li>3χ = 3.6</li>
+          <li>χ = 3.6 ÷ 3 = <strong>1.2 g</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="minitest" data-correct="o">
+      <div class="mt-stem"><span class="mt-num">問4</span>マグネシウムの燃焼は、激しい光と熱を出すので「燃焼」とよばれる酸化の一種である。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">○ 正解です。光と熱を激しく出す酸化を<span class="kw">燃焼</span>といいます。</div>
+    </div>
+
+    <div class="mt-block-result"></div>
+    <div style="text-align:center;">
+      <button class="mt-block-reset">↻ もう一度</button>
+    </div>
+  </div>
+
+  <div class="ranking">
+    <h3>🏆 ベストタイム</h3>
+    <ul id="ranking-ch09-u2" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('ch09-u2')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+</div>
+
+
+<!-- ================================================== -->
+<!--  単元3:質量比を使った計算                           -->
+<!-- ================================================== -->
+<div class="unit">
+  <div class="unit-title"><span class="num">3</span>質量比を使った計算 ― 基本パターンをマスター</div>
+
+  <div class="stage challenge" data-ch-id="ch09-u3" data-target="#ch09-u3-readbox">
+    <div class="stage-head">
+      <span class="stage-label read">📖 説明</span>
+      <div class="stage-actions">
+        <button class="audio-btn" onclick="playAudio('ch09_u3_intro')">
+          <span class="ico">▶</span> 音声で聞く
+        </button>
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="ch09-u3-readbox">
+      <p>質量比を使った計算は、入試にもよく出る重要分野です。基本的な解き方は<strong>比例式</strong>を立てて解くだけです。</p>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 計算の手順(3ステップ)</h4>
+
+      <div class="point-box" style="background:#FFF8E7;border-left:4px solid #FFB300;">
+        <span class="label">⚗️ 計算3ステップ</span>
+        <ol style="margin:6px 0 6px 20px;line-height:2.0;">
+          <li><strong>質量比を書く</strong>(Cu:O₂:CuO=4:1:5 / Mg:O₂:MgO=3:2:5)</li>
+          <li><strong>比例式を立てる</strong>(求めたい質量を χ とする)</li>
+          <li><strong>解く</strong>(外項の積=内項の積で計算)</li>
+        </ol>
+      </div>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 銅の質量表で確認</h4>
+
+      <p>銅を完全に酸化させたときの、Cu の質量・結びついた O₂ の質量・できた CuO の質量を表にまとめると、こうなります。</p>
+
+      <table style="width:100%;border-collapse:collapse;font-size:14px;margin:10px 0;">
+        <thead>
+          <tr style="background:#FFF8E7;">
+            <th style="border:1px solid #ddd;padding:8px;">Cu の質量</th>
+            <th style="border:1px solid #ddd;padding:8px;">結びついた O₂</th>
+            <th style="border:1px solid #ddd;padding:8px;">できた CuO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">1.6 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">0.4 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">2.0 g</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">2.8 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">0.7 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">3.5 g</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">4.4 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">1.1 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">5.5 g</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">6.0 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">1.5 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">7.5 g</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>どの行も Cu : O₂ : CuO = 4 : 1 : 5 になっていることを確認しましょう。</p>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ マグネシウムの質量表</h4>
+
+      <table style="width:100%;border-collapse:collapse;font-size:14px;margin:10px 0;">
+        <thead>
+          <tr style="background:#FFF8E7;">
+            <th style="border:1px solid #ddd;padding:8px;">Mg の質量</th>
+            <th style="border:1px solid #ddd;padding:8px;">結びついた O₂</th>
+            <th style="border:1px solid #ddd;padding:8px;">できた MgO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">1.5 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">1.0 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">2.5 g</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">0.9 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">0.6 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">1.5 g</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">2.7 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">1.8 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">4.5 g</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">1.8 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">1.2 g</td>
+            <td style="border:1px solid #ddd;padding:8px;text-align:center;">3.0 g</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>こちらはすべて Mg : O₂ : MgO = 3 : 2 : 5 になっています。</p>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 練習問題で確認</h4>
+
+      <div class="point-box" style="background:#E6F1FB;border-left:4px solid #185FA5;">
+        <span class="label" style="color:#0C447C;">📝 練習</span>
+        <p style="margin:6px 0;"><strong>(1)</strong> 酸化マグネシウム 2.5g を作るには、マグネシウムは何 g 必要か?</p>
+        <ul style="margin:6px 0 6px 20px;line-height:1.7;font-size:14px;">
+          <li>Mg : MgO = 3 : 5 = χ : 2.5 → 5χ = 7.5 → χ = <strong>1.5 g</strong></li>
+        </ul>
+
+        <p style="margin:14px 0 6px;"><strong>(2)</strong> 銅 3.2g を完全に酸化させると、何 g の酸化銅ができるか?</p>
+        <ul style="margin:6px 0 6px 20px;line-height:1.7;font-size:14px;">
+          <li>Cu : CuO = 4 : 5 = 3.2 : χ → 4χ = 16 → χ = <strong>4 g</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="point-box">
+      <span class="label">★ 覚えよう!</span>
+      <ul>
+        <li>計算3ステップ:質量比を書く → 比例式を立てる → 解く</li>
+        <li>銅:Cu : O₂ : CuO = 4 : 1 : 5</li>
+        <li>マグネシウム:Mg : O₂ : MgO = 3 : 2 : 5</li>
+        <li>「a : b = c : d」のとき、ad = bc(外項の積=内項の積)</li>
+      </ul>
+    </div>
+
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、説明文の空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <!-- ▼ ミニテスト -->
+  <div class="minitest-block">
+    <div class="mt-block-title">✏️ ミニテスト(全4問)</div>
+
+    <div class="q4" data-correct="c">
+      <div class="q4-stem"><span class="q4-num">問1</span>銅を完全に酸化させたとき、銅 8g に結びつく酸素は何 g か。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:0.5 g</button>
+        <button class="q4-c" data-v="b">イ:1.0 g</button>
+        <button class="q4-c" data-v="c">ウ:2.0 g</button>
+        <button class="q4-c" data-v="d">エ:4.0 g</button>
+      </div>
+      <div class="q4-exp">
+        <p style="margin:4px 0;"><strong>正解:ウ:2.0 g</strong></p>
+        <p style="margin:4px 0;font-size:13px;">Cu : O₂ = 4 : 1 を使います。結びつく酸素の質量を χg とすると:</p>
+        <ul style="margin:4px 0 4px 20px;font-size:13px;line-height:1.7;">
+          <li>4 : 1 = 8 : χ</li>
+          <li>4 × χ = 1 × 8</li>
+          <li>4χ = 8</li>
+          <li>χ = 8 ÷ 4 = <strong>2.0 g</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="q4" data-correct="b">
+      <div class="q4-stem"><span class="q4-num">問2</span>酸化銅 10g を作るには、銅は何 g 必要か。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:6 g</button>
+        <button class="q4-c" data-v="b">イ:8 g</button>
+        <button class="q4-c" data-v="c">ウ:10 g</button>
+        <button class="q4-c" data-v="d">エ:12.5 g</button>
+      </div>
+      <div class="q4-exp">
+        <p style="margin:4px 0;"><strong>正解:イ:8 g</strong></p>
+        <p style="margin:4px 0;font-size:13px;">Cu : CuO = 4 : 5 を使います。必要な銅の質量を χg とすると:</p>
+        <ul style="margin:4px 0 4px 20px;font-size:13px;line-height:1.7;">
+          <li>4 : 5 = χ : 10</li>
+          <li>5 × χ = 4 × 10</li>
+          <li>5χ = 40</li>
+          <li>χ = 40 ÷ 5 = <strong>8 g</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="q4" data-correct="b">
+      <div class="q4-stem"><span class="q4-num">問3</span>マグネシウム 3g を完全に燃焼させると、できる酸化マグネシウムは何 g か。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:4 g</button>
+        <button class="q4-c" data-v="b">イ:5 g</button>
+        <button class="q4-c" data-v="c">ウ:6 g</button>
+        <button class="q4-c" data-v="d">エ:7.5 g</button>
+      </div>
+      <div class="q4-exp">
+        <p style="margin:4px 0;"><strong>正解:イ:5 g</strong></p>
+        <p style="margin:4px 0;font-size:13px;">Mg : MgO = 3 : 5 を使います。求める酸化マグネシウムの質量を χg とすると:</p>
+        <ul style="margin:4px 0 4px 20px;font-size:13px;line-height:1.7;">
+          <li>3 : 5 = 3 : χ</li>
+          <li>3 × χ = 5 × 3</li>
+          <li>3χ = 15</li>
+          <li>χ = 15 ÷ 3 = <strong>5 g</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="q4" data-correct="c">
+      <div class="q4-stem"><span class="q4-num">問4</span>酸化マグネシウム 4.5g を作るには、何 g の酸素が結びつくか。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:0.9 g</button>
+        <button class="q4-c" data-v="b">イ:1.5 g</button>
+        <button class="q4-c" data-v="c">ウ:1.8 g</button>
+        <button class="q4-c" data-v="d">エ:2.7 g</button>
+      </div>
+      <div class="q4-exp">
+        <p style="margin:4px 0;"><strong>正解:ウ:1.8 g</strong></p>
+        <p style="margin:4px 0;font-size:13px;">Mg : O₂ : MgO = 3 : 2 : 5 のうち、O₂ : MgO = 2 : 5 の関係を使います。結びつく酸素の質量を χg とすると:</p>
+        <ul style="margin:4px 0 4px 20px;font-size:13px;line-height:1.7;">
+          <li>2 : 5 = χ : 4.5</li>
+          <li>5 × χ = 2 × 4.5</li>
+          <li>5χ = 9</li>
+          <li>χ = 9 ÷ 5 = <strong>1.8 g</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-block-result"></div>
+    <div style="text-align:center;">
+      <button class="mt-block-reset">↻ もう一度</button>
+    </div>
+  </div>
+
+  <div class="ranking">
+    <h3>🏆 ベストタイム</h3>
+    <ul id="ranking-ch09-u3" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('ch09-u3')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+</div>
+
+
+<!-- ================================================== -->
+<!--  単元4:酸化しなかった金属の計算(発展)              -->
+<!-- ================================================== -->
+<div class="unit">
+  <div class="unit-title"><span class="num">4</span>酸化しなかった金属の計算 ― 発展問題</div>
+
+  <div class="stage challenge" data-ch-id="ch09-u4" data-target="#ch09-u4-readbox">
+    <div class="stage-head">
+      <span class="stage-label read">📖 説明</span>
+      <div class="stage-actions">
+        <button class="audio-btn" onclick="playAudio('ch09_u4_intro')">
+          <span class="ico">▶</span> 音声で聞く
+        </button>
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="ch09-u4-readbox">
+      <p>少しレベルが上がります。実験で銅粉やマグネシウム粉末を加熱しても、<strong>かき混ぜ方が足りなかったり加熱時間が短かったり</strong>すると、すべての金属が酸化されないことがあります。</p>
+
+      <p>このとき、加熱後の質量からは「酸化した金属」と「酸化しなかった金属」がどれくらいあるかを計算で求められます。これが入試によく出る発展問題です。</p>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 解き方の考え方</h4>
+
+      <div class="point-box" style="background:#FFF8E7;border-left:4px solid #FFB300;">
+        <span class="label">⚗️ 重要な式</span>
+        <p style="margin:10px 0;text-align:center;font-size:15px;font-weight:500;">反応後の全体の質量 − 元の金属の質量 = <span class="kw-blank" data-a="化合した酸素">化合した酸素</span>の質量</p>
+        <p style="margin:10px 0;color:#5F5E5A;font-size:13px;">→ この酸素の質量から、酸化した金属の質量を逆算できる。</p>
+      </div>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 例題で解いてみよう</h4>
+
+      <div class="point-box" style="background:#E6F1FB;border-left:4px solid #185FA5;">
+        <span class="label" style="color:#0C447C;">📝 例題</span>
+        <p style="margin:6px 0;">銅粉 1.2g を加熱したところ、かき混ぜが不十分で、加熱後の質量は 1.4g だった。酸化しなかった銅は何 g か?</p>
+
+        <p style="margin:14px 0 6px;color:#444;font-size:13px;"><strong>ステップ1:結びついた酸素の質量を求める</strong></p>
+        <ul style="margin:6px 0 6px 20px;line-height:1.7;font-size:14px;">
+          <li>1.4g − 1.2g = <strong>0.2g</strong>(これが結びついた酸素の質量)</li>
+        </ul>
+
+        <p style="margin:14px 0 6px;color:#444;font-size:13px;"><strong>ステップ2:酸化した銅の質量を求める</strong></p>
+        <ul style="margin:6px 0 6px 20px;line-height:1.7;font-size:14px;">
+          <li>Cu : O₂ = 4 : 1</li>
+          <li>酸化した銅を χg とすると、χ : 0.2 = 4 : 1 → χ = <strong>0.8 g</strong></li>
+        </ul>
+
+        <p style="margin:14px 0 6px;color:#444;font-size:13px;"><strong>ステップ3:酸化しなかった銅を求める</strong></p>
+        <ul style="margin:6px 0 6px 20px;line-height:1.7;font-size:14px;">
+          <li>元の銅の量 − 酸化した銅 = 1.2g − 0.8g = <strong>0.4g</strong></li>
+          <li>答: <strong>0.4 g</strong></li>
+        </ul>
+      </div>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 解き方のポイント</h4>
+
+      <p>この問題は<strong>3つのステップ</strong>で解けます:</p>
+
+      <ol style="margin:8px 0 8px 20px;line-height:1.9;">
+        <li>反応後 − 元の質量 = <strong>結びついた酸素</strong></li>
+        <li>質量比から<strong>酸化した金属</strong>の質量を計算</li>
+        <li>元の金属 − 酸化した金属 = <strong>酸化しなかった金属</strong></li>
+      </ol>
+
+      <p>マグネシウムの場合も、Mg:O₂=3:2 を使って同じ手順で解けます。</p>
+    </div>
+
+    <div class="point-box">
+      <span class="label">★ 覚えよう!</span>
+      <ul>
+        <li>反応後の質量 − 元の金属 = 結びついた酸素</li>
+        <li>酸素の質量から、質量比で酸化した金属を逆算する</li>
+        <li>元の金属 − 酸化した金属 = 酸化しなかった金属</li>
+        <li>3ステップで考えるとミスが減る!</li>
+      </ul>
+    </div>
+
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、説明文の空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <!-- ▼ ミニテスト -->
+  <div class="minitest-block">
+    <div class="mt-block-title">✏️ ミニテスト(全3問)</div>
+
+    <div class="q4" data-correct="b">
+      <div class="q4-stem"><span class="q4-num">問1</span>銅粉 1.6g を加熱したら、全体として 1.9g になった。結びついた酸素は何 g か。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:0.2 g</button>
+        <button class="q4-c" data-v="b">イ:0.3 g</button>
+        <button class="q4-c" data-v="c">ウ:0.5 g</button>
+        <button class="q4-c" data-v="d">エ:1.6 g</button>
+      </div>
+      <div class="q4-exp">
+        <p style="margin:4px 0;"><strong>正解:イ:0.3 g</strong></p>
+        <p style="margin:4px 0;font-size:13px;">質量保存の法則を使います。加熱前の質量と加熱後の質量の差が、結びついた酸素の質量です。</p>
+        <ul style="margin:4px 0 4px 20px;font-size:13px;line-height:1.7;">
+          <li>加熱後の全体の質量 − 元の銅の質量 = 結びついた酸素の質量</li>
+          <li>1.9 − 1.6 = <strong>0.3 g</strong></li>
+        </ul>
+        <p style="margin:4px 0;font-size:13px;">この 0.3g が、酸化された銅と結びついた酸素の量です。</p>
+      </div>
+    </div>
+
+    <div class="q4" data-correct="c">
+      <div class="q4-stem"><span class="q4-num">問2</span>問1の続き。酸化した銅は何 g か?</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:0.4 g</button>
+        <button class="q4-c" data-v="b">イ:0.8 g</button>
+        <button class="q4-c" data-v="c">ウ:1.2 g</button>
+        <button class="q4-c" data-v="d">エ:1.6 g</button>
+      </div>
+      <div class="q4-exp">
+        <p style="margin:4px 0;"><strong>正解:ウ:1.2 g</strong></p>
+        <p style="margin:4px 0;font-size:13px;">問1で求めた酸素 0.3g と結びついた銅の質量を、Cu : O₂ = 4 : 1 を使って求めます。酸化した銅の質量を χg とすると:</p>
+        <ul style="margin:4px 0 4px 20px;font-size:13px;line-height:1.7;">
+          <li>4 : 1 = χ : 0.3</li>
+          <li>1 × χ = 4 × 0.3</li>
+          <li>χ = <strong>1.2 g</strong></li>
+        </ul>
+        <p style="margin:4px 0;font-size:13px;">この 1.2g が、酸化された銅の質量です(残り 0.4g は反応せずに銅のまま残ります)。</p>
+      </div>
+    </div>
+
+    <div class="q4" data-correct="a">
+      <div class="q4-stem"><span class="q4-num">問3</span>問1の続き。酸化しなかった銅は何 g か?</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:0.4 g</button>
+        <button class="q4-c" data-v="b">イ:0.8 g</button>
+        <button class="q4-c" data-v="c">ウ:1.2 g</button>
+        <button class="q4-c" data-v="d">エ:1.6 g</button>
+      </div>
+      <div class="q4-exp">
+        <p style="margin:4px 0;"><strong>正解:ア:0.4 g</strong></p>
+        <p style="margin:4px 0;font-size:13px;">元の銅の質量から、酸化した銅の質量(問2で求めた 1.2g)を引きます。</p>
+        <ul style="margin:4px 0 4px 20px;font-size:13px;line-height:1.7;">
+          <li>元の銅 − 酸化した銅 = 酸化しなかった銅</li>
+          <li>1.6 − 1.2 = <strong>0.4 g</strong></li>
+        </ul>
+        <p style="margin:4px 0;font-size:13px;">確認:0.4g(酸化しなかった銅)+ 1.2g(酸化した銅)+ 0.3g(結びついた酸素)= 1.9g(加熱後の全体)で、つじつまが合います。</p>
+      </div>
+    </div>
+
+    <div class="mt-block-result"></div>
+    <div style="text-align:center;">
+      <button class="mt-block-reset">↻ もう一度</button>
+    </div>
+  </div>
+
+  <div class="ranking">
+    <h3>🏆 ベストタイム</h3>
+    <ul id="ranking-ch09-u4" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('ch09-u4')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+</div>
+
+
+<!-- ================================================== -->
+<!--  単元末:次のアクション                              -->
+<!-- ================================================== -->
+<div class="next-actions">
+  <h3>🎉 すべての単元、おつかれさま!</h3>
+  <p>計算問題は何度も練習することが大切です。次は問題に挑戦しましょう!</p>
+  <div class="links">
+    <a href="ch09_practice.html">📝 練習問題へ</a>
+    <a href="ch09_check.html">📋 確認問題へ</a>
+    <a href="ch09_test.html">🏆 単元末テストへ</a>
+  </div>
+</div>
+
+<nav class="pagenav">
+  <a href="index.html">
+    <span class="label">◀ 単元表</span>
+    <span class="title">全単元一覧へ</span>
+  </a>
+  <a href="ch09_practice.html" class="next">
+    <span class="label">NEXT ▶</span>
+    <span class="title">練習問題</span>
+  </a>
+</nav>
+
+</main>
+</div>
+
+<!-- 共通モーダル類 -->
+<div class="example-modal" id="example-modal">
+  <div class="example-content" id="example-content"></div>
+</div>
+
+<div class="pass-overlay" id="pass-overlay">
+  <div class="pass-dialog">
+    <div class="pass-emoji">🎉</div>
+    <h2>合 格!</h2>
+    <p>すべて正解!よくできました!</p>
+    <div class="pass-time" id="pass-time-display">0:00.0</div>
+    <p style="font-size:13px;color:#666;margin-top:6px;">ランキングに記録されました</p>
+    <div class="pass-actions">
+      <button class="btn outline" onclick="document.getElementById('pass-overlay').classList.remove('show')">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<div class="fail-toast" id="fail-toast"></div>
+<div class="confetti" id="confetti"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
