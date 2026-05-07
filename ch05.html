@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第5講 還元 | GAMBA中学理科</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="ch05">
+
+<nav class="topnav">
+  <span class="brand">🧪 GAMBA 中学理科 化学変化</span>
+  <span class="sep">|</span>
+  <a href="index.html">📊 単元表</a>
+</nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="crumb">第5講 / 酸化と反対の変化</div>
+  <h1>還元 <span class="stars">★★☆</span></h1>
+  <p class="sub">酸化銅から酸素をとりさる「還元」を学びます。酸化と還元はいつも同時に起こります。炭素を使う方法と、水素を使う方法、2つの実験を見ていきましょう。</p>
+</header>
+
+<main>
+
+<!-- ================================================== -->
+<!--  単元1:還元って何?(知識のスタート)               -->
+<!-- ================================================== -->
+<div class="unit">
+  <div class="unit-title"><span class="num">1</span>還元って何?酸化との関係は?</div>
+
+  <!-- ▼ 説明を読む -->
+  <div class="stage challenge" data-ch-id="ch05-u1" data-target="#ch05-u1-readbox">
+    <div class="stage-head">
+      <span class="stage-label read">📖 説明</span>
+      <div class="stage-actions">
+        <button class="audio-btn" onclick="playAudio('ch05_u1_intro')">
+          <span class="ico">▶</span> 音声で聞く
+        </button>
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="ch05-u1-readbox">
+      <p>第4講で「<strong>酸化</strong>」を学びました。酸化は、物質が<span class="kw-blank" data-a="酸素">酸素</span>と結びつく化学変化のことでしたね。たとえば、銅(Cu)を加熱すると、空気中の酸素と結びついて酸化銅(CuO)ができました。</p>
+
+      <p>今回学ぶ「<strong>還元</strong>」は、酸化とは<span class="kw-blank" data-a="反対">反対</span>の変化です。つまり、酸化物から<span class="kw-blank" data-a="酸素">酸素</span>を<strong>とりさる</strong>化学変化のことを「<span class="kw-blank" data-a="還元">還元</span>」といいます。</p>
+
+      <p>たとえば、酸化銅(CuO)から酸素を取り去ると、もとの銅(Cu)にもどります。これが還元です。</p>
+
+      <p>ここで大事なポイントです。<strong>酸化と還元は、いつも同時に起こります</strong>。なぜでしょうか?酸化銅から酸素を取り去るには、その酸素を「もらってくれる物質」が必要だからです。たとえば炭素や水素が、酸化銅から酸素をうばって自分自身が酸化されます。</p>
+
+      <p>つまり、ある物質が<span class="kw-blank" data-a="還元">還元</span>されるとき、別の物質が<span class="kw-blank" data-a="酸化">酸化</span>される。これが還元の基本のしくみです。</p>
+    </div>
+
+    <div class="point-box">
+      <span class="label">★ 覚えよう!</span>
+      <ul>
+        <li>酸化 …… 物質が酸素と結びつく化学変化</li>
+        <li>還元 …… 酸化物から酸素をとりさる化学変化</li>
+        <li>酸化と還元は、いつも<strong>同時に</strong>起こる</li>
+        <li>酸化銅(CuO)+ 酸素を取る物質 → 銅(Cu)+ 別の物質</li>
+      </ul>
+    </div>
+
+    <!-- 語群 -->
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、説明文の空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <!-- ▼ ミニテスト -->
+  <div class="minitest-block">
+    <div class="mt-block-title">✏️ ミニテスト(全3問)</div>
+
+    <div class="minitest" data-correct="o">
+      <div class="mt-stem"><span class="mt-num">問1</span>還元とは、酸化物から酸素をとりさる化学変化のことである。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">○ 正解です。「還(かえ)る・元(もと)」と書いて、酸化物から酸素を取って「もとの物質にもどす」ことを意味します。</div>
+    </div>
+
+    <div class="minitest" data-correct="o">
+      <div class="mt-stem"><span class="mt-num">問2</span>酸化と還元は、いつも同時に起こる。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">○ 正解です。ある物質が還元される(酸素を失う)とき、その酸素はかならず別の物質に渡されて、その物質が酸化されます。</div>
+    </div>
+
+    <div class="q4" data-correct="b">
+      <div class="q4-stem"><span class="q4-num">問3</span>次のうち、「還元」にあたる変化はどれか。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:鉄が空気中でさびる</button>
+        <button class="q4-c" data-v="b">イ:酸化銅が銅にもどる</button>
+        <button class="q4-c" data-v="c">ウ:水を電気分解する</button>
+        <button class="q4-c" data-v="d">エ:銅を加熱して酸化銅にする</button>
+      </div>
+      <div class="q4-exp">正解は<strong>イ</strong>。酸化銅(CuO)から酸素がとれて銅(Cu)にもどる変化が還元です。アとエは酸化、ウは分解です。</div>
+    </div>
+
+    <div class="mt-block-result"></div>
+    <div style="text-align:center;">
+      <button class="mt-block-reset">↻ もう一度</button>
+    </div>
+  </div>
+
+  <!-- ランキング -->
+  <div class="ranking">
+    <h3>🏆 ベストタイム</h3>
+    <ul id="ranking-ch05-u1" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('ch05-u1')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+</div>
+
+
+<!-- ================================================== -->
+<!--  単元2:酸化銅+炭素の還元                           -->
+<!-- ================================================== -->
+<div class="unit">
+  <div class="unit-title"><span class="num">2</span>酸化銅と炭素を加熱してみよう</div>
+
+  <!-- ▼ 説明を読む -->
+  <div class="stage challenge" data-ch-id="ch05-u2" data-target="#ch05-u2-readbox">
+    <div class="stage-head">
+      <span class="stage-label read">📖 説明</span>
+      <div class="stage-actions">
+        <button class="audio-btn" onclick="playAudio('ch05_u2_intro')">
+          <span class="ico">▶</span> 音声で聞く
+        </button>
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="ch05-u2-readbox">
+      <p><span class="kw-blank" data-a="黒">黒</span>色の酸化銅の粉末と、<span class="kw-blank" data-a="炭素">炭素</span>の粉末をよく混ぜて、試験管に入れて加熱します。下の図のように、発生する気体は石灰水を入れた試験管に通します。</p>
+
+      <div class="fig-with-table" style="margin:14px 0;">
+        <div class="fig-main">
+          <img src="data:image/png;base64,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" alt="酸化銅と炭素の加熱装置" style="max-width:380px;width:100%;display:block;margin:0 auto;">
+          <div class="caption">▲ 酸化銅と炭素を試験管Aで加熱し、発生した気体を試験管Bの石灰水に通す</div>
+        </div>
+      </div>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 実験で起こる変化</h4>
+
+      <p>加熱すると、酸化銅の中の<span class="kw-blank" data-a="酸素">酸素</span>と炭素が結びつき、気体の<span class="kw-blank" data-a="二酸化炭素">二酸化炭素</span>が発生します。この気体を石灰水に通すと、石灰水は<span class="kw-blank" data-a="白">白</span>くにごります。これが二酸化炭素が発生したという証拠です。</p>
+
+      <p>試験管Aの中身も変化します。黒色だった混合物の中で、酸化銅は酸素をうばわれて<span class="kw-blank" data-a="赤褐">赤褐</span>色の<strong>銅</strong>(Cu)になります。実験のあと、試験管の中身を取り出して水で洗うと、底に赤褐色の銅が残っているのが見えます。</p>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 反応のしくみ</h4>
+
+      <p>このとき、2つの変化が同時に起こっています。</p>
+
+      <ul style="margin:8px 0 8px 20px;line-height:1.9;">
+        <li>酸化銅(CuO)は酸素をうばわれて、銅(Cu)になる → <strong>還元</strong>された</li>
+        <li>炭素(C)は酸素と結びついて、二酸化炭素(CO₂)になる → <strong>酸化</strong>された</li>
+      </ul>
+
+      <div class="point-box" style="background:#FFF8E7;border-left:4px solid #FFB300;">
+        <span class="label">⚗️ 化学反応式</span>
+        <p style="font-size:18px;text-align:center;margin:10px 0;font-weight:600;">2CuO + C → 2Cu + CO₂</p>
+        <p style="text-align:center;font-size:13px;color:#666;">酸化銅(黒) + 炭素 → 銅(赤褐色) + 二酸化炭素</p>
+      </div>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 実験のとき気をつけること</h4>
+
+      <p>実験を終わるときは、<strong>火を消す前にガラス管を石灰水から取り出します</strong>。なぜでしょうか?もし先に火を消してしまうと、試験管Aの中の空気がひえて、石灰水が試験管Aに<span class="kw-blank" data-a="逆流">逆流</span>してしまうからです。冷たい液体が熱い試験管に入ると、試験管が割れてしまうおそれがあります。</p>
+    </div>
+
+    <div class="point-box">
+      <span class="label">★ 覚えよう!</span>
+      <ul>
+        <li>酸化銅(黒)+ 炭素 → 銅(赤褐色)+ 二酸化炭素</li>
+        <li>化学反応式:2CuO + C → 2Cu + CO₂</li>
+        <li>石灰水が白くにごる → 二酸化炭素が発生した証拠</li>
+        <li>試験管の口が黒から赤褐色に変化 → 銅ができた証拠</li>
+        <li>火を消す前にガラス管を石灰水から取り出す(逆流防止)</li>
+      </ul>
+    </div>
+
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、説明文の空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <!-- ▼ ミニテスト -->
+  <div class="minitest-block">
+    <div class="mt-block-title">✏️ ミニテスト(全4問)</div>
+
+    <div class="minitest" data-correct="o">
+      <div class="mt-stem"><span class="mt-num">問1</span>酸化銅と炭素を加熱すると、銅と二酸化炭素ができる。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">○ 正解です。2CuO + C → 2Cu + CO₂ の反応です。</div>
+    </div>
+
+    <div class="q4" data-correct="b">
+      <div class="q4-stem"><span class="q4-num">問2</span>酸化銅と炭素を加熱した実験で、石灰水を白くにごらせた気体は何か。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:酸素</button>
+        <button class="q4-c" data-v="b">イ:二酸化炭素</button>
+        <button class="q4-c" data-v="c">ウ:水素</button>
+        <button class="q4-c" data-v="d">エ:アンモニア</button>
+      </div>
+      <div class="q4-exp">正解は<strong>イ:二酸化炭素</strong>。石灰水が白くにごる気体は、二酸化炭素の特徴です。</div>
+    </div>
+
+    <div class="q4" data-correct="c">
+      <div class="q4-stem"><span class="q4-num">問3</span>酸化銅と炭素を加熱した実験で、酸化銅と炭素はそれぞれ何になったか。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:酸化銅は酸化、炭素は還元された</button>
+        <button class="q4-c" data-v="b">イ:酸化銅も炭素もどちらも還元された</button>
+        <button class="q4-c" data-v="c">ウ:酸化銅は還元、炭素は酸化された</button>
+        <button class="q4-c" data-v="d">エ:酸化銅も炭素もどちらも酸化された</button>
+      </div>
+      <div class="q4-exp">正解は<strong>ウ</strong>。酸化銅は酸素をうばわれて還元、炭素は酸素と結びついて酸化されます。</div>
+    </div>
+
+    <div class="q4" data-correct="a">
+      <div class="q4-stem"><span class="q4-num">問4</span>酸化銅と炭素を加熱する実験で、火を消す前にガラス管を石灰水から取り出す理由はどれか。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:石灰水が逆流して試験管が割れるのを防ぐため</button>
+        <button class="q4-c" data-v="b">イ:石灰水が熱くなりすぎないため</button>
+        <button class="q4-c" data-v="c">ウ:気体がもれないため</button>
+        <button class="q4-c" data-v="d">エ:においを外に出さないため</button>
+      </div>
+      <div class="q4-exp">正解は<strong>ア</strong>。先に火を消すと、試験管Aの中の気体が冷えて体積が小さくなり、石灰水が逆流します。</div>
+    </div>
+
+    <div class="mt-block-result"></div>
+    <div style="text-align:center;">
+      <button class="mt-block-reset">↻ もう一度</button>
+    </div>
+  </div>
+
+  <div class="ranking">
+    <h3>🏆 ベストタイム</h3>
+    <ul id="ranking-ch05-u2" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('ch05-u2')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+</div>
+
+
+<!-- ================================================== -->
+<!--  単元3:酸化銅+水素の還元                           -->
+<!-- ================================================== -->
+<div class="unit">
+  <div class="unit-title"><span class="num">3</span>酸化銅を水素で還元してみよう</div>
+
+  <!-- ▼ 説明を読む -->
+  <div class="stage challenge" data-ch-id="ch05-u3" data-target="#ch05-u3-readbox">
+    <div class="stage-head">
+      <span class="stage-label read">📖 説明</span>
+      <div class="stage-actions">
+        <button class="audio-btn" onclick="playAudio('ch05_u3_intro')">
+          <span class="ico">▶</span> 音声で聞く
+        </button>
+        <span class="challenge-timer" style="display:none;">0:00.0</span>
+        <button class="ch-btn start">🎯 チャレンジ開始</button>
+        <button class="ch-btn judge" style="display:none;">✓ 判定</button>
+        <button class="ch-btn example" style="display:none;">📖 手本</button>
+        <button class="ch-btn reset" style="display:none;">↻ リセット</button>
+        <button class="ch-btn cancel" style="display:none;">⏹ 中断</button>
+      </div>
+    </div>
+
+    <div class="read-box" id="ch05-u3-readbox">
+      <p>還元には、炭素を使う方法のほかに、<strong>水素</strong>を使う方法もあります。下の図のように、横向きにした試験管の中に酸化銅を入れて、左から水素を流しながら加熱します。</p>
+
+      <div class="fig-with-table" style="margin:14px 0;">
+        <div class="fig-main">
+          <img src="data:image/png;base64,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wImMAHt7779FpxU/m/5VnHf2Jdf2Rq4EBERAREQEREFPcK/z2cyfatB+6BVH4XfyjK77Pvn96tVucK/z2cyfatB+6BVH4XfyjK77Pvn96tQa9REQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBU74XvwXJf6wbr+2NXEqd8L34Lkv9YN1/bGg/Wb/lWcd/Yl1/ZGrgVP5v+VZx39iXX9kauBAREQEREBERBT3Cv89nMn2rQfugVR+F38oyu+z75/erVbnCv89nMn2rQfugVR+F38oyu+z75/erUGvUREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAVO+F78FyX+sG6/tjVxLh4hilkxQXYWWnkhF2uc10rOuVz+uol11uHUToHpHYdggrvN/wAqzjv7Euv7I1cC4lwxWy12Y2vLamnkddrXTzU9LKJXBrWS66wW70d6Hr6LtoCIiAiIgIiIKe4V/ns5k+1aD90CqPwu/lGV32ffP71atQ2HFbLY7/fb5bqeSOuvs0c1e90rnCR8bOhpAJ032fguLiPFmGYplEmS2WgnhuUkVRE6R9S94LZ5hNJ7JOu7wD9XogmyIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiD/2Q==" alt="酸化銅と水素の還元装置" style="max-width:380px;width:100%;display:block;margin:0 auto;">
+          <div class="caption">▲ 横向きの試験管の中央に酸化銅を入れ、水素を流しながら加熱する</div>
+        </div>
+      </div>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 実験で起こる変化</h4>
+
+      <p>加熱すると、酸化銅の中の<span class="kw-blank" data-a="酸素">酸素</span>と水素が結びついて、<span class="kw-blank" data-a="水">水</span>(H₂O)ができます。試験管の中をよく見ると、加熱したところより少し離れた場所(出口側)に<strong>水滴</strong>がついているのが見えます。</p>
+
+      <p>そして酸化銅は、酸素をうばわれて<span class="kw-blank" data-a="赤褐">赤褐</span>色の<strong>銅</strong>になります。<span class="kw-blank" data-a="黒">黒</span>色から赤褐色に色が変わるので、見ただけで還元が起きたとわかります。</p>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 反応のしくみ</h4>
+
+      <p>この実験でも、酸化と還元が同時に起こっています。</p>
+
+      <ul style="margin:8px 0 8px 20px;line-height:1.9;">
+        <li>酸化銅(CuO)は酸素をうばわれて、銅(Cu)になる → <strong>還元</strong>された</li>
+        <li>水素(H₂)は酸素と結びついて、水(H₂O)になる → <strong>酸化</strong>された</li>
+      </ul>
+
+      <div class="point-box" style="background:#FFF8E7;border-left:4px solid #FFB300;">
+        <span class="label">⚗️ 化学反応式</span>
+        <p style="font-size:18px;text-align:center;margin:10px 0;font-weight:600;">CuO + H₂ → Cu + H₂O</p>
+        <p style="text-align:center;font-size:13px;color:#666;">酸化銅(黒) + 水素 → 銅(赤褐色) + 水</p>
+      </div>
+
+      <h4 style="color:#E67838;margin:18px 0 8px;border-left:4px solid #FF8C42;padding-left:10px;">▶ 質量の変化</h4>
+
+      <p>酸化銅から酸素が取れて銅になるので、加熱前と加熱後で質量を比べると、加熱後のほうが<span class="kw-blank" data-a="軽">軽</span>くなります(酸素の分だけ減る)。これも還元が起きた証拠の一つです。</p>
+    </div>
+
+    <div class="point-box">
+      <span class="label">★ 覚えよう!</span>
+      <ul>
+        <li>酸化銅(黒)+ 水素 → 銅(赤褐色)+ 水</li>
+        <li>化学反応式:CuO + H₂ → Cu + H₂O</li>
+        <li>試験管の出口側に水滴ができる</li>
+        <li>酸化銅の色が黒から赤褐色に変わる</li>
+        <li>加熱後は酸素の分だけ質量が減る(軽くなる)</li>
+      </ul>
+    </div>
+
+    <div class="word-bank-inline">
+      <div class="wb-title">📚 語群 ― タップして選び、説明文の空欄をタップ!</div>
+      <div class="wb-words"></div>
+    </div>
+  </div>
+
+  <!-- ▼ ミニテスト -->
+  <div class="minitest-block">
+    <div class="mt-block-title">✏️ ミニテスト(全4問)</div>
+
+    <div class="minitest" data-correct="o">
+      <div class="mt-stem"><span class="mt-num">問1</span>酸化銅と水素を反応させると、銅と水ができる。</div>
+      <div class="mt-choices">
+        <button class="mt-c" data-v="o">○</button>
+        <button class="mt-c" data-v="x">×</button>
+      </div>
+      <div class="mt-exp">○ 正解です。CuO + H₂ → Cu + H₂O の反応です。</div>
+    </div>
+
+    <div class="q4" data-correct="a">
+      <div class="q4-stem"><span class="q4-num">問2</span>酸化銅を水素で還元するとき、酸化銅の色は何色から何色に変わるか。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:黒色 → 赤褐色</button>
+        <button class="q4-c" data-v="b">イ:赤褐色 → 黒色</button>
+        <button class="q4-c" data-v="c">ウ:黒色 → 銀色</button>
+        <button class="q4-c" data-v="d">エ:銀色 → 黒色</button>
+      </div>
+      <div class="q4-exp">正解は<strong>ア</strong>。黒色の酸化銅が、赤褐色の銅にもどります。</div>
+    </div>
+
+    <div class="q4" data-correct="b">
+      <div class="q4-stem"><span class="q4-num">問3</span>酸化銅と水素を反応させたとき、加熱後の質量は加熱前と比べてどうなるか。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:加熱前の方が軽い</button>
+        <button class="q4-c" data-v="b">イ:加熱前の方が重い</button>
+        <button class="q4-c" data-v="c">ウ:変わらない</button>
+        <button class="q4-c" data-v="d">エ:加熱前の倍になる</button>
+      </div>
+      <div class="q4-exp">正解は<strong>イ</strong>。酸化銅から酸素が取れて銅になるので、加熱前の酸化銅のほうが酸素の分だけ重いです。</div>
+    </div>
+
+    <div class="q4" data-correct="d">
+      <div class="q4-stem"><span class="q4-num">問4</span>酸化銅+水素の還元実験で、試験管の出口付近にできるものは何か。</div>
+      <div class="q4-choices">
+        <button class="q4-c" data-v="a">ア:二酸化炭素</button>
+        <button class="q4-c" data-v="b">イ:酸素の気泡</button>
+        <button class="q4-c" data-v="c">ウ:塩素</button>
+        <button class="q4-c" data-v="d">エ:水滴</button>
+      </div>
+      <div class="q4-exp">正解は<strong>エ:水滴</strong>。水素+酸素 → 水 ができるので、出口付近に水滴がつきます。</div>
+    </div>
+
+    <div class="mt-block-result"></div>
+    <div style="text-align:center;">
+      <button class="mt-block-reset">↻ もう一度</button>
+    </div>
+  </div>
+
+  <div class="ranking">
+    <h3>🏆 ベストタイム</h3>
+    <ul id="ranking-ch05-u3" class="ranking-list"></ul>
+    <button class="btn outline" onclick="clearRanking('ch05-u3')" style="margin-top:6px;font-size:12px;padding:4px 12px;">記録をリセット</button>
+  </div>
+</div>
+
+
+<!-- ================================================== -->
+<!--  単元末:次のアクション                              -->
+<!-- ================================================== -->
+<div class="next-actions">
+  <h3>🎉 すべての単元、おつかれさま!</h3>
+  <p>次は問題に挑戦しよう!順番にチャレンジするのがおすすめです。</p>
+  <div class="links">
+    <a href="ch05_practice.html">📝 練習問題へ</a>
+    <a href="ch05_check.html">📋 確認問題へ</a>
+    <a href="ch05_test.html">🏆 単元末テストへ</a>
+  </div>
+</div>
+
+<nav class="pagenav">
+  <a href="index.html">
+    <span class="label">◀ 単元表</span>
+    <span class="title">全単元一覧へ</span>
+  </a>
+  <a href="ch05_practice.html" class="next">
+    <span class="label">NEXT ▶</span>
+    <span class="title">練習問題</span>
+  </a>
+</nav>
+
+</main>
+</div>
+
+<!-- 共通モーダル類 -->
+<div class="example-modal" id="example-modal">
+  <div class="example-content" id="example-content"></div>
+</div>
+
+<div class="pass-overlay" id="pass-overlay">
+  <div class="pass-dialog">
+    <div class="pass-emoji">🎉</div>
+    <h2>合 格!</h2>
+    <p>すべて正解!よくできました!</p>
+    <div class="pass-time" id="pass-time-display">0:00.0</div>
+    <p style="font-size:13px;color:#666;margin-top:6px;">ランキングに記録されました</p>
+    <div class="pass-actions">
+      <button class="btn outline" onclick="document.getElementById('pass-overlay').classList.remove('show')">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<div class="fail-toast" id="fail-toast"></div>
+<div class="confetti" id="confetti"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
