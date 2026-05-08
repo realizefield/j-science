@@ -2,798 +2,351 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>目次 | GAMBA中学理科 化学変化</title>
-<link rel="stylesheet" href="app.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAMBA中学理科 化学変化｜単元一覧</title>
 <style>
-/* ===== マトリクス目次 専用スタイル ===== */
-.matrix-wrap {
-  margin: 20px 0;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+:root{
+  --primary:#0f766e;--primary-light:#ccfbf1;--primary-mid:#14b8a6;
+  --accent:#e8372d;--accent-light:#fff1f0;
+  --success:#16a34a;--success-light:#dcfce7;
+  --warn:#d97706;--warn-light:#fffbeb;
+  --bg:#f0fdf4;--card:#ffffff;--border:#a7f3d0;
+  --text:#1e293b;--text-sub:#64748b;--radius:12px;
 }
-.matrix-tbl {
-  width: 100%;
-  min-width: 720px;
-  border-collapse: separate;
-  border-spacing: 4px;
-  background: transparent;
-}
-.matrix-tbl thead th {
-  background: linear-gradient(135deg, #4FC3F7 0%, #29B6F6 100%);
-  color: #fff;
-  padding: 10px 6px;
-  font-size: 12px;
-  text-align: center;
-  border-radius: 8px;
-  white-space: nowrap;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-}
-.matrix-tbl thead th.col-chapter {
-  background: linear-gradient(135deg, #FF8C42 0%, #E67838 100%);
-  width: 22%;
-  min-width: 160px;
-}
-.matrix-tbl tbody td {
-  padding: 0;
-  vertical-align: middle;
-  text-align: center;
-}
-/* 講のラベル(左端) */
-.chap-label {
-  background: linear-gradient(135deg, #FFE0B2 0%, #FFCC80 100%);
-  border-radius: 8px;
-  padding: 12px 10px;
-  text-align: left;
-}
-.chap-label .chap-num {
-  color: #E67838;
-  font-weight: bold;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-}
-.chap-label .chap-title {
-  color: #2C3E50;
-  font-weight: bold;
-  font-size: 15px;
-  margin: 2px 0 0;
-}
-.chap-label .chap-desc {
-  color: #666;
-  font-size: 11px;
-  margin: 4px 0 0;
-}
-/* 各セル(リンク付き) */
-.cell-link {
-  background: #FFF8E7;
-  border: 2px solid #FFD699;
-  border-radius: 8px;
-  padding: 10px 6px;
-  text-decoration: none;
-  color: #2C3E50;
-  transition: all 0.15s;
-  min-height: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.cell-link:hover {
-  background: #FFECB3;
-  border-color: #FF8C42;
-  transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgba(255,140,66,0.25);
-}
-.cell-link .ico {
-  font-size: 18px;
-  margin-bottom: 3px;
-}
-.cell-link .label {
-  font-size: 11px;
-  font-weight: bold;
-  line-height: 1.3;
-  color: #2C3E50;
-}
-.cell-link .sublabel {
-  font-size: 10px;
-  color: #888;
-  margin-top: 2px;
-}
-/* 準備中セル */
-.cell-prep {
-  background: #F5F5F5;
-  border: 2px dashed #DDD;
-  border-radius: 8px;
-  padding: 10px 6px;
-  color: #BBB;
-  min-height: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 11px;
-}
-.cell-prep .ico {
-  font-size: 16px;
-  margin-bottom: 2px;
-  opacity: 0.5;
-}
-.cell-prep .label {
-  font-size: 10px;
-  font-weight: normal;
-}
-/* 空セル */
-.cell-empty {
-  background: transparent;
-  min-height: 70px;
-}
-/* セルの色違い:問題(青系)/サブツール(紫系) */
-.cell-link.q-cell {
-  background: #E3F2FD;
-  border-color: #90CAF9;
-}
-.cell-link.q-cell:hover {
-  background: #BBDEFB;
-  border-color: #1976D2;
-}
-.cell-link.tool-cell {
-  background: #F3E5F5;
-  border-color: #CE93D8;
-}
-.cell-link.tool-cell:hover {
-  background: #E1BEE7;
-  border-color: #8E24AA;
-}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'BIZ UDPGothic','BIZ UDP Gothic','Meiryo',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:40px;}
 
-/* レジェンド */
-.legend {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin: 14px 0 18px;
-  font-size: 12px;
-  color: #666;
-}
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.legend-swatch {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  border-radius: 3px;
-  border: 2px solid;
-}
+/* ヘッダー */
+.page-header{background:linear-gradient(135deg,#065f46 0%,#0f766e 60%,#1a56a0 100%);color:#fff;padding:24px 20px 20px;text-align:center;box-shadow:0 4px 20px rgba(15,118,110,.4);}
+.page-header .app-name{font-size:.78em;opacity:.75;letter-spacing:.2em;margin-bottom:6px;}
+.page-header h1{font-size:clamp(1.3em,4vw,1.8em);font-weight:700;margin-bottom:6px;}
+.page-header .app-sub{font-size:.82em;opacity:.85;}
 
-.matrix-hint {
-  display: none;
-  color: #FF8C42;
-  font-size: 12px;
-  margin-bottom: 8px;
+/* 凡例 */
+.legend{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:12px 14px;background:var(--card);border-bottom:1px solid var(--border);}
+.legend-item{display:flex;align-items:center;gap:5px;font-size:.78em;color:var(--text-sub);}
+.legend-chip{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;font-size:.72em;font-weight:700;color:#fff;}
+.chip-a{background:#16a34a;}.chip-b{background:#d97706;}.chip-c{background:#e8372d;}.chip-none{background:#94a3b8;}
+
+/* フィルターバー */
+.filter-bar{display:flex;gap:6px;flex-wrap:wrap;padding:12px 14px;background:var(--card);border-bottom:1px solid var(--border);max-width:880px;margin:0 auto;justify-content:center;}
+.filter-btn{font-family:inherit;padding:6px 14px;border-radius:50px;border:1.5px solid var(--border);background:#fff;font-size:.78em;font-weight:700;color:var(--text-sub);cursor:pointer;transition:all .15s;}
+.filter-btn.active{background:var(--primary);border-color:var(--primary);color:#fff;}
+.filter-btn.filter-a.active{background:#16a34a;border-color:#16a34a;color:#fff;}
+.filter-btn.filter-b.active{background:#d97706;border-color:#d97706;color:#fff;}
+.filter-btn.filter-c.active{background:#e8372d;border-color:#e8372d;color:#fff;}
+
+/* 進捗 */
+.progress-section{max-width:880px;margin:16px auto;padding:0 14px;}
+.progress-card{background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius);padding:14px 18px;}
+.progress-title{font-size:.88em;font-weight:700;color:var(--primary);margin-bottom:10px;}
+.progress-bar-outer{background:#e2e8f0;border-radius:8px;height:14px;overflow:hidden;margin-bottom:8px;}
+.progress-bar-inner{height:100%;background:linear-gradient(90deg,var(--success),#22c55e);border-radius:8px;transition:width .4s ease;}
+.progress-stats{display:flex;gap:12px;flex-wrap:wrap;font-size:.82em;color:var(--text-sub);align-items:center;}
+.progress-stats span strong{color:var(--primary);}
+.stat-a{color:#16a34a!important;font-weight:700;}
+.stat-b{color:#d97706!important;font-weight:700;}
+.stat-c{color:#e8372d!important;font-weight:700;}
+
+/* 説明バナー */
+.info-banner{
+  max-width:880px;margin:0 auto;padding:12px 16px;
+  background:linear-gradient(135deg,var(--warn-light),#dbeafe);
+  border:1.5px solid var(--warn);border-radius:var(--radius);
+  font-size:.82em;line-height:1.7;color:var(--text);
 }
-@media (max-width: 720px) {
-  .matrix-hint { display: block; }
+.info-banner strong{color:var(--warn);}
+
+/* 単元カード */
+.g-container{max-width:880px;margin:0 auto;padding:18px 14px 0;}
+.unit-list{display:flex;flex-direction:column;gap:8px;margin-top:14px;}
+.unit-card{
+  background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius);
+  padding:12px 14px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+  position:relative;transition:box-shadow .18s,border-color .18s;
+  border-left:5px solid var(--border);
+}
+.unit-card.review-a{background:linear-gradient(135deg,#f0fdf4,#fff);border-left-color:#16a34a;}
+.unit-card.review-b{background:linear-gradient(135deg,#fffbeb,#fff);border-left-color:#d97706;}
+.unit-card.review-c{background:linear-gradient(135deg,#fff1f0,#fff);border-left-color:#e8372d;}
+
+/* 講番号バッジ */
+.unit-badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:54px;height:54px;border-radius:10px;
+  font-weight:700;
+  background:var(--primary-light);color:var(--primary);
+  flex-shrink:0;line-height:1.1;text-align:center;
+}
+.unit-badge .badge-num{font-size:.85em;}
+.unit-badge .badge-stars{font-size:.65em;opacity:.7;margin-top:2px;}
+
+/* 単元情報 */
+.unit-info{flex:1;min-width:140px;}
+.unit-title{font-size:1em;font-weight:700;color:var(--text);margin-bottom:2px;}
+.unit-sub{font-size:.78em;color:var(--text-sub);}
+
+/* リンクボタン群 */
+.link-group{display:flex;gap:6px;flex-wrap:wrap;}
+.link-btn{
+  font-family:inherit;text-decoration:none;
+  padding:7px 12px;border-radius:8px;
+  font-size:.78em;font-weight:700;
+  border:1.5px solid;display:inline-flex;align-items:center;gap:4px;
+  white-space:nowrap;transition:all .15s;
+}
+.link-btn.lb-main{background:var(--primary);color:#fff;border-color:var(--primary);}
+.link-btn.lb-main:hover{background:#0d655e;}
+.link-btn.lb-sub{background:#fff;color:var(--primary);border-color:var(--primary-mid);}
+.link-btn.lb-sub:hover{background:var(--primary-light);}
+.link-btn.lb-tool{background:#fff;color:#7c3aed;border-color:#a78bfa;}
+.link-btn.lb-tool:hover{background:#ede9fe;}
+
+/* A/B/C ボタングループ */
+.abc-group{display:flex;gap:4px;flex-shrink:0;}
+.abc-btn{
+  width:32px;height:32px;border-radius:7px;
+  border:2px solid #cbd5e1;background:#f8fafc;color:#94a3b8;
+  font-size:.85em;font-weight:700;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .15s;font-family:inherit;
+  -webkit-tap-highlight-color:transparent;
+}
+.abc-btn:hover{transform:scale(1.12);}
+.abc-btn.active-a{background:#16a34a;border-color:#16a34a;color:#fff;box-shadow:0 2px 8px rgba(22,163,74,.4);}
+.abc-btn.active-b{background:#d97706;border-color:#d97706;color:#fff;box-shadow:0 2px 8px rgba(217,119,6,.4);}
+.abc-btn.active-c{background:#e8372d;border-color:#e8372d;color:#fff;box-shadow:0 2px 8px rgba(232,55,45,.4);}
+
+/* リセットボタン */
+.reset-section{text-align:center;margin-top:24px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.btn-reset-abc{
+  font-family:inherit;background:#fff1f0;color:var(--accent);
+  border:1.5px solid #fca5a5;padding:10px 20px;border-radius:50px;
+  cursor:pointer;font-size:.82em;transition:.2s;
+}
+.btn-reset-abc:hover{background:#ffe4e1;}
+
+.unit-card.hidden-by-filter{display:none;}
+
+/* 学習の流れ */
+.flow-section{
+  max-width:880px;margin:24px auto 0;padding:14px 16px;
+  background:#f0fdf4;border:1px solid #6ee7b7;border-radius:var(--radius);
+}
+.flow-title{font-size:.92em;font-weight:700;color:#065f46;margin-bottom:8px;}
+.flow-text{font-size:.82em;color:#047857;line-height:1.7;}
+.flow-text strong{color:#065f46;}
+
+/* レスポンシブ */
+@media (max-width:520px){
+  .unit-card{padding:10px;gap:8px;}
+  .unit-badge{width:48px;height:48px;}
+  .link-btn{padding:6px 9px;font-size:.72em;}
+  .abc-btn{width:28px;height:28px;font-size:.78em;}
+  .unit-info{min-width:110px;}
 }
 </style>
 </head>
-<body data-page="index">
+<body>
 
-<nav class="topnav">
-  <span class="brand">🧪 GAMBA 中学理科 化学変化</span>
-</nav>
+<!-- ヘッダー -->
+<div class="page-header">
+  <div class="app-name">🧪 GAMBA 中学理科</div>
+  <h1>化学変化 ― 単元一覧</h1>
+  <div class="app-sub">中2理科｜江原予備校</div>
+</div>
 
-<div class="wrap">
-
-<header class="hero">
-  <h1>化学変化 ― 目次 <span class="stars">★★☆</span></h1>
-  <p class="sub">中学理科「化学変化」の全9講を、講ごと・単元ごとに整理しました。下の表から、学びたい単元・取り組みたい問題に直接ジャンプできます。</p>
-</header>
-
-<main>
-
-<!-- ===== レジェンド ===== -->
+<!-- 凡例 -->
 <div class="legend">
-  <div class="legend-item">
-    <span class="legend-swatch" style="background:#FFF8E7;border-color:#FFD699;"></span>
-    <span>📖 学習(各単元の説明とチャレンジ)</span>
+  <div class="legend-item"><div class="legend-chip chip-a">A</div> わかった</div>
+  <div class="legend-item"><div class="legend-chip chip-b">B</div> 復習が必要</div>
+  <div class="legend-item"><div class="legend-chip chip-c">C</div> 何度も学習しよう</div>
+  <div class="legend-item"><div class="legend-chip chip-none">−</div> 未設定</div>
+</div>
+
+<!-- フィルターバー -->
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="setFilter('all',this)">すべて表示</button>
+  <button class="filter-btn filter-a" onclick="setFilter('A',this)">🟢 A のみ</button>
+  <button class="filter-btn filter-b" onclick="setFilter('B',this)">🟠 B のみ</button>
+  <button class="filter-btn filter-c" onclick="setFilter('C',this)">🔴 C のみ</button>
+</div>
+
+<!-- 進捗 -->
+<div class="progress-section">
+  <div class="progress-card">
+    <div class="progress-title">📊 学習の進みぐあい</div>
+    <div class="progress-bar-outer">
+      <div class="progress-bar-inner" id="progressBar" style="width:0%"></div>
+    </div>
+    <div class="progress-stats">
+      <span>全 <strong>9</strong> 講</span>
+      <span id="progressPct" style="font-weight:700;color:var(--primary);">0%</span>
+      <span>｜
+        <span class="stat-a">A:<strong id="cntA">0</strong></span>
+        <span class="stat-b" style="margin-left:6px;">B:<strong id="cntB">0</strong></span>
+        <span class="stat-c" style="margin-left:6px;">C:<strong id="cntC">0</strong></span>
+      </span>
+    </div>
   </div>
-  <div class="legend-item">
-    <span class="legend-swatch" style="background:#E3F2FD;border-color:#90CAF9;"></span>
-    <span>📝 問題(練習・確認・単元末テスト)</span>
+</div>
+
+<div class="g-container">
+
+  <!-- 説明バナー -->
+  <div class="info-banner">
+    <strong>💡 使い方:</strong>「📖 本編」をタップして学習スタート!勉強したあとは、自分の理解度に合わせて
+    <span style="background:#16a34a;color:#fff;font-weight:700;font-size:.85em;padding:2px 7px;border-radius:5px;">A</span>
+    <span style="background:#d97706;color:#fff;font-weight:700;font-size:.85em;padding:2px 7px;border-radius:5px;">B</span>
+    <span style="background:#e8372d;color:#fff;font-weight:700;font-size:.85em;padding:2px 7px;border-radius:5px;">C</span>
+    のボタンを押して記録しよう。次に来たとき、どこを復習すればいいかすぐわかります 👍
   </div>
-  <div class="legend-item">
-    <span class="legend-swatch" style="background:#F3E5F5;border-color:#CE93D8;"></span>
-    <span>📚 サブツール</span>
+
+  <!-- 単元カードリスト -->
+  <div class="unit-list" id="unit-list"></div>
+
+  <!-- リセットボタン -->
+  <div class="reset-section">
+    <button class="btn-reset-abc" onclick="resetABC()">🔄 A/B/Cの記録をリセット</button>
   </div>
-  <div class="legend-item">
-    <span class="legend-swatch" style="background:#F5F5F5;border-color:#DDD;border-style:dashed;"></span>
-    <span>準備中</span>
+
+  <!-- 学習の流れ -->
+  <div class="flow-section">
+    <div class="flow-title">🗺️ 学習の流れ</div>
+    <div class="flow-text">
+      <strong>第1〜5講</strong> ― 化学変化の<strong>種類と現象</strong>を学ぼう(分解・化合・酸化・発熱/吸熱・還元)<br>
+      <strong>第6〜7講</strong> ― 物質や反応を<strong>記号と式</strong>で表してみよう<br>
+      <strong>第8〜9講</strong> ― <strong>質量の関係</strong>を学んで、計算問題に挑戦!
+    </div>
   </div>
+
 </div>
 
-<p class="matrix-hint">👉 横にスクロールできます</p>
+<script>
+/* ── 単元データ ── */
+const UNITS = [
+  {id:'ch01', num:'第1講', stars:'★★☆', title:'分解',                sub:'物質が分かれる反応',         hasTool:false},
+  {id:'ch02', num:'第2講', stars:'★★☆', title:'化合',                sub:'物質が結びつく反応',         hasTool:false},
+  {id:'ch03', num:'第3講', stars:'★★☆', title:'酸化(燃焼)',           sub:'酸素と結びつく化合',         hasTool:false},
+  {id:'ch04', num:'第4講', stars:'★★☆', title:'発熱反応・吸熱反応',   sub:'化学変化と熱の出入り',       hasTool:false},
+  {id:'ch05', num:'第5講', stars:'★★☆', title:'還元',                sub:'酸素をうばう反応',           hasTool:false},
+  {id:'ch06', num:'第6講', stars:'★★☆', title:'化学式と原子・分子',   sub:'物質を式で表す',             hasTool:true,  toolUrl:'ch02_elements.html', toolLabel:'📚 元素記号'},
+  {id:'ch07', num:'第7講', stars:'★★☆', title:'化学反応式',           sub:'化学変化を式で表す',         hasTool:false},
+  {id:'ch08', num:'第8講', stars:'★★☆', title:'質量保存の法則',       sub:'反応前後で質量は変わらない', hasTool:false},
+  {id:'ch09', num:'第9講', stars:'★★★', title:'化学変化と質量計算',   sub:'質量比を使った計算',         hasTool:false},
+];
 
-<!-- ===== マトリクス目次 ===== -->
-<div class="matrix-wrap">
-<table class="matrix-tbl">
-  <thead>
-    <tr>
-      <th class="col-chapter">講</th>
-      <th>単元1</th>
-      <th>単元2</th>
-      <th>単元3</th>
-      <th>単元4</th>
-      <th>単元5</th>
-      <th>📝 練習</th>
-      <th>📋 確認</th>
-      <th>🏆 テスト</th>
-      <th>📚 サブ</th>
-    </tr>
-  </thead>
-  <tbody>
+let currentFilter = 'all';
 
-    <!-- ▼ 第1講 分解 -->
-    <tr>
-      <td>
-        <div class="chap-label">
-          <div class="chap-num">第1講 ★★☆</div>
-          <div class="chap-title">分解</div>
-          <div class="chap-desc">物質が分かれる反応</div>
+/* ── A/B/C 状態の保存・取得(localStorage) ── */
+function getABC(id){ return localStorage.getItem('gamba_sci_review_' + id); }
+function setABC(id, val){
+  const cur = getABC(id);
+  if(cur === val) localStorage.removeItem('gamba_sci_review_' + id);
+  else localStorage.setItem('gamba_sci_review_' + id, val);
+  refreshCard(id);
+  updateStats();
+  applyFilter();
+}
+
+/* ── カード描画 ── */
+function buildCards(){
+  const list = document.getElementById('unit-list');
+  list.innerHTML = '';
+
+  UNITS.forEach(u => {
+    const abc = getABC(u.id);
+    const card = document.createElement('div');
+    card.id = 'card-' + u.id;
+    card.className = 'unit-card'
+      + (abc === 'A' ? ' review-a' : abc === 'B' ? ' review-b' : abc === 'C' ? ' review-c' : '');
+
+    let linksHtml = `<a class="link-btn lb-main" href="${u.id}.html">📖 本編</a>`;
+    linksHtml += `<a class="link-btn lb-sub" href="${u.id}_practice.html">📝 練習</a>`;
+    linksHtml += `<a class="link-btn lb-sub" href="${u.id}_check.html">📋 確認</a>`;
+    linksHtml += `<a class="link-btn lb-sub" href="${u.id}_test.html">🏆 テスト</a>`;
+    if(u.hasTool) linksHtml += `<a class="link-btn lb-tool" href="${u.toolUrl}">${u.toolLabel}</a>`;
+
+    card.innerHTML = `
+      <div class="unit-badge">
+        <div>
+          <div class="badge-num">${u.num}</div>
+          <div class="badge-stars">${u.stars}</div>
         </div>
-      </td>
-      <td>
-        <a href="ch01.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">化学変化と<br>分解</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch01.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">炭酸水素<br>ナトリウム</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch01.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">酸化銀の<br>分解</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch01.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">水の<br>電気分解</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch01.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">塩化銅の<br>電気分解</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch01_practice.html" class="cell-link q-cell">
-          <span class="ico">📝</span>
-          <span class="label">練習問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch01_check.html" class="cell-link q-cell">
-          <span class="ico">📋</span>
-          <span class="label">確認問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch01_test.html" class="cell-link q-cell">
-          <span class="ico">🏆</span>
-          <span class="label">単元末<br>テスト</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-    </tr>
+      </div>
+      <div class="unit-info">
+        <div class="unit-title">${u.title}</div>
+        <div class="unit-sub">${u.sub}</div>
+      </div>
+      <div class="link-group">${linksHtml}</div>
+      <div class="abc-group">
+        <button class="abc-btn abc-btn-A${abc==='A'?' active-a':''}" onclick="setABC('${u.id}','A')" title="A:わかった">A</button>
+        <button class="abc-btn abc-btn-B${abc==='B'?' active-b':''}" onclick="setABC('${u.id}','B')" title="B:復習が必要">B</button>
+        <button class="abc-btn abc-btn-C${abc==='C'?' active-c':''}" onclick="setABC('${u.id}','C')" title="C:何度も学習しよう">C</button>
+      </div>`;
+    list.appendChild(card);
+  });
 
-    <!-- ▼ 第2講 化合 -->
-    <tr>
-      <td>
-        <div class="chap-label">
-          <div class="chap-num">第2講 ★★☆</div>
-          <div class="chap-title">化合</div>
-          <div class="chap-desc">物質が結びつく反応</div>
-        </div>
-      </td>
-      <td>
-        <a href="ch02.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">化合とは</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch02.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">鉄と<br>酸素</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch02.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">鉄と<br>硫黄</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch02.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">銅と<br>硫黄</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-      <td>
-        <a href="ch02_practice.html" class="cell-link q-cell">
-          <span class="ico">📝</span>
-          <span class="label">練習問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch02_check.html" class="cell-link q-cell">
-          <span class="ico">📋</span>
-          <span class="label">確認問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch02_test.html" class="cell-link q-cell">
-          <span class="ico">🏆</span>
-          <span class="label">単元末<br>テスト</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-    </tr>
+  updateStats();
+}
 
-    <!-- ▼ 第3講 酸化(燃焼) -->
-    <tr>
-      <td>
-        <div class="chap-label">
-          <div class="chap-num">第3講 ★★☆</div>
-          <div class="chap-title">酸化(燃焼)</div>
-          <div class="chap-desc">酸素と結びつく化合</div>
-        </div>
-      </td>
-      <td>
-        <a href="ch03.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">酸化と<br>燃焼</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch03.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">銅の<br>酸化</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch03.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">マグネシウム<br>の燃焼</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch03.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">銀の酸化と<br>水素の燃焼</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-      <td>
-        <a href="ch03_practice.html" class="cell-link q-cell">
-          <span class="ico">📝</span>
-          <span class="label">練習問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch03_check.html" class="cell-link q-cell">
-          <span class="ico">📋</span>
-          <span class="label">確認問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch03_test.html" class="cell-link q-cell">
-          <span class="ico">🏆</span>
-          <span class="label">単元末<br>テスト</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-    </tr>
+function refreshCard(id){
+  const card = document.getElementById('card-' + id);
+  if(!card) return;
+  const abc = getABC(id);
 
-    <!-- ▼ 第4講 発熱反応・吸熱反応 -->
-    <tr>
-      <td>
-        <div class="chap-label">
-          <div class="chap-num">第4講 ★★☆</div>
-          <div class="chap-title">発熱反応・吸熱反応</div>
-          <div class="chap-desc">化学変化と熱の出入り</div>
-        </div>
-      </td>
-      <td>
-        <a href="ch04.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">化学変化と<br>熱</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch04.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">発熱反応<br>(カイロ)</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch04.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">吸熱反応<br>(冷却パック)</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch04.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">身のまわりの<br>発熱・吸熱</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-      <td>
-        <a href="ch04_practice.html" class="cell-link q-cell">
-          <span class="ico">📝</span>
-          <span class="label">練習問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch04_check.html" class="cell-link q-cell">
-          <span class="ico">📋</span>
-          <span class="label">確認問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch04_test.html" class="cell-link q-cell">
-          <span class="ico">🏆</span>
-          <span class="label">単元末<br>テスト</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-    </tr>
+  card.className = 'unit-card'
+    + (abc === 'A' ? ' review-a' : abc === 'B' ? ' review-b' : abc === 'C' ? ' review-c' : '');
 
-    <!-- ▼ 第5講 還元 -->
-    <tr>
-      <td>
-        <div class="chap-label">
-          <div class="chap-num">第5講 ★★☆</div>
-          <div class="chap-title">還元</div>
-          <div class="chap-desc">酸素をうばう反応</div>
-        </div>
-      </td>
-      <td>
-        <a href="ch05.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">還元とは<br>酸化との関係</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch05.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">酸化銅+<br>炭素</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch05.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">酸化銅+<br>水素</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-      <td>
-        <a href="ch05_practice.html" class="cell-link q-cell">
-          <span class="ico">📝</span>
-          <span class="label">練習問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch05_check.html" class="cell-link q-cell">
-          <span class="ico">📋</span>
-          <span class="label">確認問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch05_test.html" class="cell-link q-cell">
-          <span class="ico">🏆</span>
-          <span class="label">単元末<br>テスト</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-    </tr>
+  ['A','B','C'].forEach(l => {
+    const btn = card.querySelector('.abc-btn-' + l);
+    if(!btn) return;
+    btn.className = 'abc-btn abc-btn-' + l + (abc === l ? ' active-' + l.toLowerCase() : '');
+  });
+}
 
-    <!-- ▼ 第6講 化学式と原子・分子 -->
-    <tr>
-      <td>
-        <div class="chap-label">
-          <div class="chap-num">第6講 ★★☆</div>
-          <div class="chap-title">化学式と原子・分子</div>
-          <div class="chap-desc">物質を式で表す</div>
-        </div>
-      </td>
-      <td>
-        <a href="ch06.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">原子と<br>元素</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch06.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">元素記号</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch06.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">分子と<br>化学式</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch06.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">単体と<br>化合物</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-      <td>
-        <a href="ch06_practice.html" class="cell-link q-cell">
-          <span class="ico">📝</span>
-          <span class="label">練習問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch06_check.html" class="cell-link q-cell">
-          <span class="ico">📋</span>
-          <span class="label">確認問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch06_test.html" class="cell-link q-cell">
-          <span class="ico">🏆</span>
-          <span class="label">単元末<br>テスト</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch02_elements.html" class="cell-link tool-cell">
-          <span class="ico">📚</span>
-          <span class="label">元素記号<br>トレーナー</span>
-        </a>
-      </td>
-    </tr>
+function updateStats(){
+  let a=0, b=0, c=0;
+  UNITS.forEach(u => {
+    const abc = getABC(u.id);
+    if(abc==='A') a++; else if(abc==='B') b++; else if(abc==='C') c++;
+  });
+  // 進捗 = A の割合
+  const pct = Math.round(a / UNITS.length * 100);
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = pct + '%';
+  document.getElementById('cntA').textContent = a;
+  document.getElementById('cntB').textContent = b;
+  document.getElementById('cntC').textContent = c;
+}
 
-    <!-- ▼ 第7講 化学反応式 -->
-    <tr>
-      <td>
-        <div class="chap-label">
-          <div class="chap-num">第7講 ★★☆</div>
-          <div class="chap-title">化学反応式</div>
-          <div class="chap-desc">化学変化を式で表す</div>
-        </div>
-      </td>
-      <td>
-        <a href="ch07.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">化学反応式<br>とは</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch07.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">作り方の<br>4ステップ</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch07.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">代表的な<br>反応式</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch07.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">語呂で<br>覚える</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-      <td>
-        <a href="ch07_practice.html" class="cell-link q-cell">
-          <span class="ico">📝</span>
-          <span class="label">練習問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch07_check.html" class="cell-link q-cell">
-          <span class="ico">📋</span>
-          <span class="label">確認問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch07_test.html" class="cell-link q-cell">
-          <span class="ico">🏆</span>
-          <span class="label">単元末<br>テスト</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-    </tr>
+function setFilter(val, btn){
+  currentFilter = val;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilter();
+}
 
-    <!-- ▼ 第8講 質量保存の法則 -->
-    <tr>
-      <td>
-        <div class="chap-label">
-          <div class="chap-num">第8講 ★★☆</div>
-          <div class="chap-title">質量保存の法則</div>
-          <div class="chap-desc">反応前後で質量は変わらない</div>
-        </div>
-      </td>
-      <td>
-        <a href="ch08.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">質量保存<br>の法則</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch08.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">沈殿が<br>できる反応</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch08.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">気体発生<br>(密閉系)</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch08.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">塩化アンモニウム<br>+水酸化Na</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-      <td>
-        <a href="ch08_practice.html" class="cell-link q-cell">
-          <span class="ico">📝</span>
-          <span class="label">練習問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch08_check.html" class="cell-link q-cell">
-          <span class="ico">📋</span>
-          <span class="label">確認問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch08_test.html" class="cell-link q-cell">
-          <span class="ico">🏆</span>
-          <span class="label">単元末<br>テスト</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-    </tr>
+function applyFilter(){
+  UNITS.forEach(u => {
+    const card = document.getElementById('card-' + u.id);
+    if(!card) return;
+    let show = true;
+    if(currentFilter === 'A') show = getABC(u.id) === 'A';
+    else if(currentFilter === 'B') show = getABC(u.id) === 'B';
+    else if(currentFilter === 'C') show = getABC(u.id) === 'C';
+    card.classList.toggle('hidden-by-filter', !show);
+  });
+}
 
-    <!-- ▼ 第9講 化学変化と質量計算 -->
-    <tr>
-      <td>
-        <div class="chap-label">
-          <div class="chap-num">第9講 ★★★</div>
-          <div class="chap-title">化学変化と質量計算</div>
-          <div class="chap-desc">質量比を使った計算</div>
-        </div>
-      </td>
-      <td>
-        <a href="ch09.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">銅の酸化と<br>質量比</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch09.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">マグネシウム<br>の質量比</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch09.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">質量比を<br>使った計算</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch09.html" class="cell-link">
-          <span class="ico">📖</span>
-          <span class="label">酸化しなかった<br>金属の計算</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-      <td>
-        <a href="ch09_practice.html" class="cell-link q-cell">
-          <span class="ico">📝</span>
-          <span class="label">練習問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch09_check.html" class="cell-link q-cell">
-          <span class="ico">📋</span>
-          <span class="label">確認問題</span>
-        </a>
-      </td>
-      <td>
-        <a href="ch09_test.html" class="cell-link q-cell">
-          <span class="ico">🏆</span>
-          <span class="label">単元末<br>テスト</span>
-        </a>
-      </td>
-      <td>
-        <div class="cell-empty"></div>
-      </td>
-    </tr>
+function resetABC(){
+  if(!confirm('A/B/Cの記録をすべてリセットしますか?')) return;
+  UNITS.forEach(u => localStorage.removeItem('gamba_sci_review_' + u.id));
+  UNITS.forEach(u => refreshCard(u.id));
+  updateStats(); applyFilter();
+}
 
-  </tbody>
-</table>
-</div>
-
-<!-- ===== 補足リンク ===== -->
-<div style="margin-top:30px;padding:18px;background:#FFF8E7;border:1px solid #FFD699;border-radius:10px;">
-  <h3 style="margin:0 0 8px;color:#E67838;font-size:15px;">💡 はじめての方へ</h3>
-  <p style="margin:0;font-size:13px;color:#555;line-height:1.7;">
-    まずは <a href="ch01.html" style="color:#E67838;font-weight:bold;">第1講 分解</a> から順番に取り組むのがおすすめです。<br>
-    各単元には「📖 説明 → 🎯 チャレンジ → ✏️ 確認問題」の流れがあり、説明を読みながら語群を埋めていく <strong>チャレンジ</strong> でベストタイムを縮められます。
-  </p>
-</div>
-
-<!-- ===== 学習の流れ図 ===== -->
-<div style="margin-top:20px;padding:18px;background:#E8F5E9;border:1px solid #81C784;border-radius:10px;">
-  <h3 style="margin:0 0 10px;color:#2E7D32;font-size:15px;">🗺️ 学習の流れ</h3>
-  <p style="margin:0 0 8px;font-size:13px;color:#1B5E20;line-height:1.7;">
-    <strong>第1〜5講</strong>では化学変化の <strong>種類と現象</strong> を学びます(分解・化合・酸化・発熱/吸熱・還元)。<br>
-    <strong>第6〜7講</strong>では物質や反応を <strong>記号と式で表す</strong> 方法を学びます。<br>
-    <strong>第8〜9講</strong>では <strong>質量の関係</strong> を学び、計算問題に挑戦します。
-  </p>
-</div>
-
-</main>
-</div>
-
+buildCards();
+</script>
 </body>
 </html>
